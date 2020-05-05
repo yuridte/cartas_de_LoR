@@ -1,3 +1,15 @@
 <?php 
-#pegar por variável GET o código da carta e informar todas as informações sobre ela
+$cards = json_decode(file_get_contents("lor.json"), true);
+
+$results = array_filter($cards, function($filter) {
+    return $filter['cardCode'] == $_GET['cardCode'];
+});
+
+foreach ($results as $key => $value) {
+    echo $value['name'] . "<br/>";
+    foreach($value['assets'] as $assets){
+        echo $assets['gameAbsolutePath'] . "<br/>";
+    }
+    echo "<img width='200px' src='img/cards/" . $value['cardCode'] ."'/>";
+}
 ?>

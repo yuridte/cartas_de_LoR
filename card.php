@@ -1,5 +1,5 @@
 <?php 
-$cards = json_decode(file_get_contents("lor.json"), true);
+$cards = json_decode(file_get_contents("lor-01.json"), true);
 
 $results = array_filter($cards, function($filter) {
     return $filter['cardCode'] == $_GET['cardCode'];

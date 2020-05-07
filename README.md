@@ -5,8 +5,7 @@ Usando API da Riot para capturar arte das cartas de Legends of Runeterra
 
 Substitua todos os caracteres que podem atrapalhar o php no seu arquivo json.
 
-<pre>
+
 ? = &#63;
 \" = &quot;
 ' = &#39;
-</pre>

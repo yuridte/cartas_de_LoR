@@ -5,7 +5,11 @@ use Pagerfanta\Adapter\ArrayAdapter;
 use Pagerfanta\Pagerfanta;
 
 //Preparando consulta a banco de dados
-$sql = "SELECT name, cardCode FROM cards WHERE collectible LIKE 1 ORDER BY name ASC;";
+$sql = "SELECT name, cardCode FROM cards WHERE ";
+//
+//colocar os filtros
+//
+$sql .= "collectible LIKE 1 ORDER BY name ASC;";
 $cards_by_name = $dbConn->query($sql)->fetchAll();
 
 //Paginando

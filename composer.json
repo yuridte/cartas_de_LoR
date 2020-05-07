@@ -1,5 +1,6 @@
 {
     "require": {
-        "pagerfanta/pagerfanta": "^2.1"
+        "pagerfanta/pagerfanta": "^2.1",
+        "mike-reinders/runeterra-php": "^0.0.3"
     }
 }

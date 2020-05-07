@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Pagerfanta\\' => array($vendorDir . '/pagerfanta/pagerfanta/src/Pagerfanta'),
+    'MikeReinders\\RuneTerraPHP\\' => array($vendorDir . '/mike-reinders/runeterra-php/src'),
+    'Base32\\' => array($vendorDir . '/christian-riesen/base32/src'),
 );

@@ -11,12 +11,28 @@ class ComposerStaticInit1b22d29d34d6f654e34607d39b659593
         array (
             'Pagerfanta\\' => 11,
         ),
+        'M' => 
+        array (
+            'MikeReinders\\RuneTerraPHP\\' => 26,
+        ),
+        'B' => 
+        array (
+            'Base32\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Pagerfanta\\' => 
         array (
             0 => __DIR__ . '/..' . '/pagerfanta/pagerfanta/src/Pagerfanta',
+        ),
+        'MikeReinders\\RuneTerraPHP\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mike-reinders/runeterra-php/src',
+        ),
+        'Base32\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/christian-riesen/base32/src',
         ),
     );
 

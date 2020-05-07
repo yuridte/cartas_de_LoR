@@ -1,6 +1,5 @@
 <?php
-require_once("cfg.php");
-require_once("class/db-class.php");
+require_once("initBD.php"); //iniciando conexão com base de dados
 
 //Connecting DB
 $db = new DB($cfgHost, $cfgPort, $cfgDbName, $cfgUser, $cfgPassword);

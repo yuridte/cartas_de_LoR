@@ -1,30 +1,22 @@
 <?php 
-require_once("cfg.php");
-require_once("class/db-class.php");
-
-$db = new DB($cfgHost, $cfgPort, $cfgDbName, $cfgUser, $cfgPassword);
-$dbConn = $db->getConnection();
-
+require_once("initBD.php"); //iniciando conexão com base de dados
 
 if(isset($_GET['cardCode'])) {
+    //Preparando consulta a banco de dados
+    $cardCode = $_GET['cardCode'];
+    $sql = "SELECT * FROM cards WHERE cardCode LIKE '$cardCode';";
+    $card = $dbConn->query($sql)->fetchAll();
 
-    $cards = json_decode(file_get_contents("lor-01.json"), true);
-
-    $results = array_filter($cards, function($filter) {
-        return $filter['cardCode'] == $_GET['cardCode'];
-    });
-
-    foreach ($results as $key => $value) {
-        echo $value['name'] . "<br/>";
-        foreach($value['assets'] as $assets){
-            echo $assets['gameAbsolutePath'] . "<br/>";
-        }
-        echo "<img width='200px' src='img/cards/" . $value['cardCode'] ."'/>";
+    foreach ($card as $card_info) {
+        extract($card_info);
+        echo $name . "<br/>";
+        echo "<img src='img/cards_medium_size/" . $cardCode ."-medium.png'/>";
     }
 
 }else{
 
     //redirecionar para home
+    //Erro 404
     
 }
 ?>

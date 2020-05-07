@@ -1,5 +1,6 @@
 <?php
-require "vendor/autoload.php";
+require_once("initBD.php"); //iniciando conexão com base de dados
+require_once("vendor/autoload.php");
 use Pagerfanta\Adapter\ArrayAdapter;
 use Pagerfanta\Pagerfanta;
 
@@ -9,7 +10,10 @@ $adapter = new ArrayAdapter($cards);
 $pagerfanta = new Pagerfanta($adapter);
 
 $pagerfanta->setMaxPerPage(10); // 10 by default
-$pagerfanta->setCurrentPage(1); // 1 by default
+
+if(isset($_GET['pagina'])){
+    $pagerfanta->setCurrentPage($_GET['pagina']); // 1 by default
+}
 
 $nbResults = $pagerfanta->getNbResults();
 $currentPageResults = $pagerfanta->getCurrentPageResults();

@@ -16,12 +16,18 @@ $cards_by_name = $dbConn->query($sql)->fetchAll();
 $adapter = new ArrayAdapter($cards_by_name);
 $pagerfanta = new Pagerfanta($adapter);
 
+//setando página atual
+$pagina_atual = NULL;
+if(isset($_GET['pagina'])){
+    $pagina_atual = $_GET['pagina'];
+}else{
+    $pagina_atual = 1;
+}
+
 $pagerfanta->setMaxPerPage(20); // 10 by default
 
 try {
-    if(isset($_GET['pagina'])){
-        $pagerfanta->setCurrentPage($_GET['pagina']); // 1 by default
-    }
+    $pagerfanta->setCurrentPage($pagina_atual); // 1 by default
 
     $currentPageResults = $pagerfanta->getCurrentPageResults();
     
@@ -45,7 +51,7 @@ if ($pagerfanta->hasPreviousPage()) {
 
 $nbPages = $pagerfanta->getNbPages();
 for ($pagina=1; $pagina <= $nbPages; $pagina++) { 
-    if ($pagina == $_GET['pagina']) {
+    if ($pagina == $pagina_atual) {
         echo $pagina;
     } else {
         echo "<a href='?pagina=$pagina'>$pagina</a>";

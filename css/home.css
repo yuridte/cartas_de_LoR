@@ -7,7 +7,16 @@
 }
 #background-video video{
     width: 100%;
-    position: absolute;
+    height: 100%;
+    position: relative;
+    float: right;
+    object-fit: cover;
+}
+#background-video video.mobile{
+    width: auto;
+    height: 100%;
+    position: relative;
+    float: right;
 }
 .overlay{
     position: absolute;
@@ -42,7 +51,7 @@ h1 {
     font-size: 150px;
     font-family: headers, serif;
     position: absolute;
-    margin-top: -150px;;
+    margin-top: -150px;
 	background: -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
 	background: -o-linear-gradient(transparent, transparent);
@@ -70,4 +79,22 @@ h2{
 		5px 5px 10px rgba(14, 12, 12, 0.4),
         -5px -5px 10px rgba(0, 0, 0, 0.4);
         text-align: center;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        color:	#D5AD6D; /*if no support for background-clip*/
+        font-size: 70px;
+        font-family: headers, serif;
+        position: absolute;
+        margin-top: -150px;
+        background: -webkit-linear-gradient(transparent, transparent),
+                 -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+        background: -o-linear-gradient(transparent, transparent);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }

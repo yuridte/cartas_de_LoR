@@ -20,8 +20,54 @@
     opacity: .5;
     display: none;
 }
-.content{
+.container-content{
     position: absolute;
     width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
     z-index: 5;
+}
+
+/*Fontes*/
+@font-face {
+    font-family: headers;
+    src: url("../font/friz/Friz\ Quadrata\ Regular.ttf");
+}
+
+/*letras douradas*/
+h1 {
+    color:	#D5AD6D; /*if no support for background-clip*/
+    font-size: 150px;
+    font-family: headers, serif;
+    position: absolute;
+    margin-top: -150px;;
+	background: -webkit-linear-gradient(transparent, transparent),
+             -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
+	background: -o-linear-gradient(transparent, transparent);
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1:after {
+    background: none;
+    content: attr(data-heading);
+    left: 0;
+	top: 0;
+    z-index: -1;
+    position: absolute;
+    text-shadow: 
+		-1px 0 1px #c6bb9f, 
+		0 1px 1px #c6bb9f, 
+		5px 5px 10px rgba(14, 12, 12, 0.4),
+        -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+h2{
+    font-family: headers, serif;
+    font-size: 35px;
+    color: whitesmoke;
+    text-shadow:
+		5px 5px 10px rgba(14, 12, 12, 0.4),
+        -5px -5px 10px rgba(0, 0, 0, 0.4);
+        text-align: center;
 }

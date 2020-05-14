@@ -1,10 +1,11 @@
 <?php
 require_once("vendor/autoload.php");
-
 use MikeReinders\RuneTerraPHP\DeckEncoding;
+
 // decodificando...
 $deck = DeckEncoding::decode("CEBAIAICAMGRWMIHAECQOCQVC4RC6MICAEAQKKQBAEBASAQBAECQ6AQBAIDSA");
 var_dump($deck);
+
 //codificando de volta
 $code = DeckEncoding::encode($deck);
 echo var_dump($code);

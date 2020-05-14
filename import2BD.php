@@ -1,10 +1,6 @@
 <?php
 require_once("initBD.php"); //iniciando conexão com base de dados
 
-//Connecting DB
-$db = new DB($cfgHost, $cfgPort, $cfgDbName, $cfgUser, $cfgPassword);
-$dbConn = $db->getConnection();
-
 //Getting json with cards
 $cards= json_decode(file_get_contents("lor-01.json"), true);
 

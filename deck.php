@@ -23,25 +23,41 @@ if(isset($_GET['id'])){
                 //separando os dados
                 $item_array = explode("_", $item);
                 ///Vamos procurar as cartas e separar por tipo
-                $cardCode = $item_array[0];
+                if(isset($item_array[0])) : $cardCode = $item_array[0]; endif;
+                if(isset($item_array[1])) : $qt = $item_array[1]; endif;
                 $sql_card = "SELECT name, regionRef, type, supertype FROM cards WHERE cardCode LIKE '$cardCode'";
                 $card_array = $dbConn->query($sql_card)->fetchAll();
                 
                 foreach ($card_array as $card_info) {
+
+                    //incluindo o cardCode e a quantidade
+                    $card_info['cardCode'] = $cardCode;
+                    $card_info['qt'] = $qt;
+
                     if ($card_info['type'] == "Unidade") {
+                        //alimentando array
                         array_push($units_array, $card_info);
                     }elseif ($card_info['type'] == "Feitiço") {
+                        //alimentando array
                         array_push($spell_array, $card_info);
                     }
+
                 }
 
             }
     
         }
 
-        //continuar daqui
-        var_dump($units_array[0]);
-        var_dump($spell_array[0]);
+        //EXIBINDO O DECK
+        echo '<h1>Unidades</h1>';
+        foreach ($units_array as $card) {
+            echo $card['name'] . " - " . $card['qt'] . "<br>";
+        }
+
+        echo '<h1>Feitiços</h1>';
+        foreach ($spell_array as $card) {
+            echo $card['name'] . " - " . $card['qt'] . "<br>";
+        }
     
         require_once("footer.php"); //rodapé do site
     }else{

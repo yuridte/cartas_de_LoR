@@ -1,9 +1,9 @@
 #background-video{
-    position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-    z-index: 1;
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 #background-video video{
     width: 100%;
@@ -11,6 +11,7 @@
     position: relative;
     float: right;
     object-fit: cover;
+    z-index: -1;
 }
 #background-video video.mobile{
     width: auto;
@@ -18,11 +19,10 @@
     position: relative;
     float: right;
 }
-.overlay{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 5;
+.bg-nav{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.964005585144214) 0%, rgba(0,0,0,0) 100%);
+    padding: 20px;
 }
 .bg-blue{
     background-color: #142b87;
@@ -38,6 +38,25 @@
     overflow: hidden;
     z-index: 5;
 }
+.conteudo-home{
+    background-color: #191A22;
+}
+.fade-separator{
+    background: rgb(33,2,74);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #191A22 100%); 
+    height: 100px;
+}
+
+/* HOME SLIDER */
+.carousel{
+    min-height: 400px;
+}
+
+/* FOOTER */
+.footer-copyright{
+    background-color: #21024a;
+    color: whitesmoke;
+}
 
 /*Fontes*/
 @font-face {
@@ -48,28 +67,14 @@
 /*letras douradas*/
 h1 {
     color:	#D5AD6D; /*if no support for background-clip*/
-    font-size: 150px;
+    font-size: 100px;
     font-family: headers, serif;
-    position: absolute;
-    margin-top: -150px;
 	background: -webkit-linear-gradient(transparent, transparent),
              -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
 	background: -o-linear-gradient(transparent, transparent);
 	-webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-h1:after {
-    background: none;
-    content: attr(data-heading);
-    left: 0;
-	top: 0;
-    z-index: -1;
-    position: absolute;
-    text-shadow: 
-		-1px 0 1px #c6bb9f, 
-		0 1px 1px #c6bb9f, 
-		5px 5px 10px rgba(14, 12, 12, 0.4),
-        -5px -5px 10px rgba(0, 0, 0, 0.4);
+    padding: 40px;
 }
 h2{
     font-family: headers, serif;
@@ -81,18 +86,11 @@ h2{
         text-align: center;
 }
 
+
+
 /* Responsividade */
 @media only screen and (max-width: 800px) {
     h1 {
-        color:	#D5AD6D; /*if no support for background-clip*/
-        font-size: 70px;
-        font-family: headers, serif;
-        position: absolute;
-        margin-top: -150px;
-        background: -webkit-linear-gradient(transparent, transparent),
-                 -webkit-linear-gradient(top, rgba(213,173,109,1) 0%, rgba(213,173,109,1) 26%, rgba(226,186,120,1) 35%, rgba(163,126,67,1) 45%, rgba(145,112,59,1) 61%, rgba(213,173,109,1) 100%);
-        background: -o-linear-gradient(transparent, transparent);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: 50px;
     }
 }

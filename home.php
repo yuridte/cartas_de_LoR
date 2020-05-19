@@ -13,18 +13,38 @@ require_once("header.php");
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">HOME</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
+                REGIÕES
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">REGIÕES</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <a class="dropdown-item" href="#">ÁGUAS DE SENTINA</a>
+                    <a class="dropdown-item" href="#">DEMACIA</a>
+                    <a class="dropdown-item" href="#">FRELJORD</a>
+                    <a class="dropdown-item" href="#">ILHAS DAS SOMBRAS</a>
+                    <a class="dropdown-item" href="#">IONIA</a>
+                    <a class="dropdown-item" href="#">NOXUS</a>
+                    <a class="dropdown-item" href="#">PILTOVER & ZAUN</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CARTAS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">DECKS</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">INICIANTES</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">CONTATO</a>
             </li>
         </ul>
     </div>
@@ -45,11 +65,8 @@ require_once("header.php");
     <div class="carousel-item active">
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1>Seja<br>bem-vindo!</h1>
-                </div>
-                <div class="col">
-                    Seja<br>bem-vindo!
+                <div class="col-md-12">
+                    <h1>Seja bem-vindo!</h1>
                 </div>
             </div>
         </div>
@@ -79,15 +96,19 @@ require_once("header.php");
         <div class="row">
             <div class="col-sm-12">
                 <h2>Decks em alta</h2>
+                <hr>
             </div>
             <div class="col-sm-12">
                 <h2>Decks em alta</h2>
+                <hr>
             </div>
             <div class="col-sm-12">
                 <h2>Decks em alta</h2>
+                <hr>
             </div>
             <div class="col-sm-12">
                 <h2>Decks em alta</h2>
+                <hr>
             </div>
         </div>
     </div>

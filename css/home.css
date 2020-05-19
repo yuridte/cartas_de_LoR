@@ -1,15 +1,19 @@
 /*Fontes*/
 @font-face {
     font-family: "headers";
-    src: url("../font/friz/Friz\ Quadrata\ Regular.ttf");
+    src: url("../font/friz/FrizQuadrataRegular.woff2");
 }
 @font-face {
     font-family: "montserrat";
-    src: url("../font/Montserrat-ExtraBoldItalic.ttf");
+    src: url("../font/Montserrat-ExtraBoldItalic.woff2");
 }
 @font-face {
     font-family: "menu";
-    src: url("../font/OpenSansCondensed-Light.ttf");
+    src: url("../font/OpenSansCondensed-Light.woff2");
+}
+@font-face {
+    font-family: "nunito";
+    src: url("../font/Nunito-Regular.woff2");
 }
 
 /* Home */

@@ -18,7 +18,9 @@
 
 /* Home */
 body{
+    font-family: nunito;
     background-color: #191A22;
+    color: whitesmoke;
 }
 #background-video{
     width: 100%;
@@ -41,11 +43,21 @@ body{
     position: relative;
     float: right;
 }
-nav{
+#background-video.intern-pages-video-bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+.navbar{
     position: absolute;
+    width: 100%;
+    top: 0;
     font-family: 'menu';
     font-size: x-large;
     text-transform: uppercase;
+    z-index: 1000;
 }
 .bg-nav{
     background: rgb(0,0,0);
@@ -66,19 +78,81 @@ nav{
     overflow: hidden;
     z-index: 5;
 }
-.conteudo-home{
+.conteudo{
     background-color: #191A22;
     padding-top: 50px;;
 }
-.conteudo-home hr{
+.conteudo hr{
     background: linear-gradient(to right, rgba(255,0,0,0), #D5AD6D, rgba(255,0,0,0));
     height: 1px;
     border: none;
+}
+.banner{
+    width: 100%;
+    z-index: -1;
+    padding-top: 80px;
+    padding-bottom: 30px;;
+    object-fit: fill;
+    text-align: center;
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-width: 2px;
+    border-image-source: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    box-shadow: 0px 10px 10px #000;
+}
+.banner-galeria-cartas{
+    background-image: url('../img/card-gallery.png');
+}
+.container-card-gallery{
+    padding: 50px 0;
+}
+.carta-link{
+    padding: 20px ;
+}
+.carta-link img{
+    transition: .4s;
+    width: 100%;
+}
+.carta-link img:hover{
+    margin-top: -10px;
+    filter: drop-shadow(0 0 10px #3064b8); 
 }
 .fade-separator{
     background: rgb(33,2,74);
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #191A22 100%); 
     height: 100px;
+}
+.page-item{
+    margin: 5px;
+}
+.page-item.active .page-link{
+    background-color: #21024a;
+    border-color: #21024a;
+    box-shadow: 0 0 5px whitesmoke;
+}
+.page-link{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;   
+    border-radius: 5px;
+    transition: .3s;
+}
+.page-link:hover{
+    color: #21024a;
+}
+.width-47{
+    width: 47px;
+    text-align: center;
+}
+.margem-top-150{
+    margin-top: 150px;;
+}
+
+/* Página de cadastro */
+.cadastro-box{
+    background-color: rgb(0,0,0, .9);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* HOME SLIDER */
@@ -87,6 +161,9 @@ nav{
 }
 
 /* FOOTER */
+footer{
+    margin-top: 30px;
+}
 .footer-copyright{
     background-color: #21024a;
     color: whitesmoke;
@@ -125,5 +202,8 @@ h2{
 @media only screen and (max-width: 800px) {
     h1 {
         font-size: 50px;
+    }
+    .carta-link{
+        padding: 20px 80px ;
     }
 }

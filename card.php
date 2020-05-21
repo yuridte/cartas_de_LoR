@@ -1,5 +1,6 @@
 <?php 
 require_once("initBD.php"); //iniciando conexão com base de dados
+require_once("header.php");
 
 if(isset($_GET['cardCode'])) {
     //Preparando consulta a banco de dados
@@ -17,6 +18,7 @@ if(isset($_GET['cardCode'])) {
 
     //redirecionar para home
     //Erro 404
-    
 }
+
+require_once("footer.php");
 ?>

@@ -28,7 +28,7 @@ require_once("header.php"); //cabeçalho do site
                 </div>
                 <div class="form-group">
                     <label for="description">Descrição</label>
-                    <textarea name="description" id="description" class="form-control" rows="5" aria-describedby="descricaoHelp" placeholder="Opcional"></textarea>
+                    <textarea name="description" id="description" class="form-control" rows="3" aria-describedby="descricaoHelp" placeholder="Opcional"></textarea>
                     <small id="descricaoHelp" class="form-text text-muted">Fale um pouco sobre você respeitando os outros usuários e as regras de uso do site</small>
                 </div>
 

@@ -91,7 +91,7 @@ body{
     width: 100%;
     z-index: -1;
     padding-top: 80px;
-    padding-bottom: 30px;;
+    padding-bottom: 30px;
     object-fit: fill;
     text-align: center;
     border-bottom: 2px solid;
@@ -102,9 +102,48 @@ body{
 }
 .banner-galeria-cartas{
     background-image: url('../img/card-gallery.png');
+    background-size: cover;
+    background-position: center;
 }
-.container-card-gallery{
+.banner-carta{
+    padding-top: 50px;
+    padding-bottom: 0px;
+    background-size: cover;
+    background-position: center center;
+}
+.banner-carta h1{
+    font-size: 2em;
+    color: white;
+    -webkit-text-fill-color: white !important;
+    text-shadow: 0 0 10px #000;
+}
+.container-padrao{
     padding: 50px 0;
+}
+.info-grid{
+    font-family: "nunito" !important;
+}
+.info-grid b{
+    font-family: "montserrat" !important;
+    text-transform: uppercase;
+}
+.info-grid td{
+    padding: 12px;
+    vertical-align: middle;
+}
+.info-grid td img{
+    height: 30px;
+    vertical-align: middle;
+}
+.modal-dialog img{
+    width: 100%;
+    height: auto;
+}
+.modal-body{
+    padding: 0;
+}
+.modal-body .close{
+    margin-right: 10px;
 }
 .carta-link{
     padding: 20px ;
@@ -148,11 +187,88 @@ body{
     margin-top: 150px;;
 }
 
+/*CSS para formulários*/
+.form-group div{
+    padding: 20px;
+}
+.form-control{
+    background-color: transparent;
+    color: whitesmoke;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    transition: .3s;
+}
+.form-control:focus{
+    outline: none;
+    background-color: transparent;
+    border-color: #234d91;
+    color: #234d91;
+    box-shadow: none;
+}
+.filtro_regioes_galeria img, .filtro_raridades_galeria img{
+    margin: 15px;
+    transition: .1s;
+    cursor: pointer;
+}
+.filtro_regioes_galeria h2, .filtro_raridades_galeria h2{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+/*regiões*/
+.filtro_regioes_galeria #Bilgewater:hover, .filtro_regioes_galeria #Bilgewater.ativo{
+    filter: drop-shadow(0 0 2px #f55d42);
+}
+.filtro_regioes_galeria #Demacia:hover, .filtro_regioes_galeria #Demacia.ativo{
+    filter: drop-shadow(0 0 2px #fff);
+}
+.filtro_regioes_galeria #Freljord:hover, .filtro_regioes_galeria #Freljord.ativo{
+    filter: drop-shadow(0 0 2px #00a6ff);
+}
+.filtro_regioes_galeria #Ionia:hover, .filtro_regioes_galeria #Ionia.ativo{
+    filter: drop-shadow(0 0 2px #f542e9);
+}
+.filtro_regioes_galeria #Noxus:hover, .filtro_regioes_galeria #Noxus.ativo{
+    filter: drop-shadow(0 0 2px red);
+}
+.filtro_regioes_galeria #PiltoverZaun:hover, .filtro_regioes_galeria #PiltoverZaun.ativo{
+    filter: drop-shadow(0 0 2px #d6bd31);
+}
+.filtro_regioes_galeria #ShadowIsles:hover, .filtro_regioes_galeria #ShadowIsles.ativo{
+    filter: drop-shadow(0 0 2px #927ff5);
+}
+/*raridades*/
+.filtro_raridades_galeria #All{
+    border-radius: 50%;
+}
+.filtro_raridades_galeria #All:hover, .filtro_raridades_galeria #All.ativo{
+    box-shadow: -5px -5px 30px #00c43e,
+    -10px 10px 30px #6f00c4,
+    10px -10px 20px #1b5f9e,
+    10px 10px 20px #f7a900;
+}
+.filtro_raridades_galeria #Common:hover, .filtro_raridades_galeria #Common.ativo{
+    filter: drop-shadow(0 0 8px #00c43e);
+}
+.filtro_raridades_galeria #Rare:hover, .filtro_raridades_galeria #Rare.ativo{
+    filter: drop-shadow(0 0 8px #1b5f9e);
+}
+.filtro_raridades_galeria #Epic:hover, .filtro_raridades_galeria #Epic.ativo{
+    filter: drop-shadow(0 0 8px #6f00c4);
+}
+.filtro_raridades_galeria #Champion:hover, .filtro_raridades_galeria #Champion.ativo{
+    filter: drop-shadow(0 0 8px #f7a900);
+}
+
+
 /* Página de cadastro */
 .cadastro-box{
     background-color: rgb(0,0,0, .9);
     padding: 20px;
     border-radius: 10px;
+}
+.cadastro-box .form-group{
+	margin-bottom: 50px;
 }
 
 /* HOME SLIDER */

@@ -59,6 +59,10 @@ body{
     text-transform: uppercase;
     z-index: 1000;
 }
+.navbar-dark .navbar-nav .nav-link{
+    color: #cc8e12; 
+    text-shadow: 0 0 3px black;
+}
 .bg-nav{
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,0.964005585144214) 0%, rgba(0,0,0,0) 100%);
@@ -82,7 +86,7 @@ body{
     background-color: #191A22;
     padding-top: 50px;;
 }
-.conteudo hr{
+hr{
     background: linear-gradient(to right, rgba(255,0,0,0), #D5AD6D, rgba(255,0,0,0));
     height: 1px;
     border: none;
@@ -156,6 +160,13 @@ body{
     margin-top: -10px;
     filter: drop-shadow(0 0 10px #3064b8); 
 }
+.separador-cards{
+    padding: 50px 0;
+}
+.related-cards{
+    margin-top: 50px;
+    margin-bottom: 80px;
+}
 .fade-separator{
     background: rgb(33,2,74);
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #191A22 100%); 
@@ -185,6 +196,18 @@ body{
 }
 .margem-top-150{
     margin-top: 150px;;
+}
+
+/*share-box*/
+.share-box{
+    background-color: #100130;
+    padding: 30px;
+    border-radius: 20px;
+}
+h3{
+    font-size: 20px;
+    font-family: "nunito";
+    margin-bottom: 25px;
 }
 
 /*CSS para formulários*/
@@ -278,7 +301,7 @@ body{
 
 /* FOOTER */
 footer{
-    margin-top: 30px;
+    margin-top: 80px;
 }
 .footer-copyright{
     background-color: #21024a;

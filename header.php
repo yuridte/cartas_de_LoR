@@ -16,6 +16,8 @@ require_once("cfg.php");
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon-mestres-de-runeterra-32.jpg" sizes="32x32">
+    <link rel="shortcut icon" href="img/favicon-mestres-de-runeterra.jpg" sizes="57x57">
     <title>Mestres de Runeterra</title>
 
     <!-- Bootstrap -->
@@ -34,7 +36,7 @@ require_once("cfg.php");
 
     <!-- MENU -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-nav">
-        <a class="navbar-brand" href="home.php">Mestres de Runeterra</a>
+        <a class="navbar-brand" href="home.php"><img src="img/logo-mestres-de-runeterra-small.png" alt="Mestres de Runeterra"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,6 +76,15 @@ require_once("cfg.php");
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">CONTATO</a>
+                </li>
+                <li>
+                    <?php 
+                    if(isset($_COOKIE['login']) && $_COOKIE['login'] == "true"){
+                        echo '<a class="nav-link" href="encerrar_sessao.php">SAIR</a>';
+                    }else{
+                        echo '<a class="nav-link" href="entrar.php">ENTRAR</a>';
+                    }
+                    ?>
                 </li>
             </ul>
         </div>

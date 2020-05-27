@@ -20,8 +20,10 @@ if($results == 1){
         
         if(isset($return_path)){
             header("location: " . $return_path); 
+        }else{
+            header("location: home.php");
         }
     }
 }else{
-    echo "Usuário não encontrado";
+    header("Location:entrar.php?msg=error");
 }

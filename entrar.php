@@ -10,20 +10,56 @@ require_once("header.php"); //cabeçalho do site
     <div class="row justify-content-md-center">
         <div class="col-md-6 cadastro-box">
             <form action="iniciar_sessao.php" method="post">
-                
-                <?php
+
+                <?php 
+                if (isset($_GET['msg'])) {
+                    switch ($_GET['msg']) {
+                        case 'ok':
+                            echo '<div class="alert alert-success" role="alert">
+                                    Login realizado com sucesso!
+                                </div>';
+                            break;
+
+                        case 'error':
+                            echo '<div class="alert alert-danger" role="alert">
+                                    Erro! Por favor certifique-se que os seus dados de acesso foram inseridos corretamente.
+                                </div>';
+                            break;
+
+                        case 'logout':
+                            echo '<div class="alert alert-warning" role="alert">
+                                    Você saiu da sua conta! Até logo &#128521;
+                                </div>';
+                            break;
+                        
+                        default:
+                            # code...
+                            break;
+                    }
+                }
+
+
                 if(isset($_GET['return_path'])){
                     echo '<input type="hidden" name="return_path" id="return_path" value="' . $_GET['return_path'] . '">';
                 }
                 ?>
 
-                <label for="email">E-mail</label>
-                <input type="text" name="email" id="email">
+                <h2>Entrar</h2>
 
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" name="email" id="email" required>
+                </div>
 
-                <input type="submit" value="Cadastrar-se">
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
+                </div>
+
+                <input type="submit" class="btn btn-primary" value="Entrar"><br><br>
+                <div class="text-right">
+                    <a href="cadastro.php">Clique aqui para se cadastrar</a>
+                </div>
             </form>
         </div>
     </div>

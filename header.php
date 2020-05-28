@@ -86,7 +86,7 @@ require_once("cfg.php");
                         Olá, <?= $_COOKIE['name'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="login-drop">
-                            <a class="dropdown-item" href="#">Ver Perfil</a>
+                            <a class="dropdown-item" href="my-profile.php">Ver Perfil</a>
                             <a class="dropdown-item" href="my-decks.php">Meus Decks</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="encerrar_sessao.php">SAIR</a>

@@ -4,16 +4,22 @@ require_once("initBD.php"); //iniciando conexão com base de dados
 require_once("header.php"); //cabeçalho do site
 ?>
 
-<div class="banner banner-deck-creator">
-    <h1>Biblioteca de Decks</h1>
+<div class="banner banner-my-decks">
+    <h1>Meus Decks</h1>
 </div>
 
 <div class="container margem-top-80">
 	<div class="row">
+		<div class="col-md-4">
+			<!-- 
+				IMPORTAR DECK
+			-->
+			Importar
+		</div>
 
 		<!-- LISTA DE DECKS -->
 		<?php 
-		$sql = "SELECT * FROM decks ORDER BY timestamp DESC;";
+		$sql = "SELECT * FROM decks WHERE owner_id LIKE '$_COOKIE[id]' ORDER BY timestamp DESC;";
 		//colocando em array
         $decks_by_time = $dbConn->query($sql)->fetchAll();
 

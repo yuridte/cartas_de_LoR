@@ -381,6 +381,15 @@ if(isset($_GET['cardCode'])) {
 
                     ?>
 
+            </div>
+        </div>
+        <?php } ?>
+        <!-- FIM cartas relacionadas -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    
                     <!-- Plugins sociais -->
                     <div class="col-md-12 share-box">
                         <h3>Gostou da página? Compartilhe com seus amigos ...</h3>
@@ -399,11 +408,11 @@ if(isset($_GET['cardCode'])) {
                         <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"></a>
 
                     </div>
-
+                    
+                </div>
             </div>
         </div>
-        <?php } ?>
-        <!-- FIM cartas relacionadas -->
+
     <?php
     }
 }else{

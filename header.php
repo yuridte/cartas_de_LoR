@@ -66,10 +66,10 @@ require_once("cfg.php");
                     <a class="nav-link" href="card-gallery.php">CARTAS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">DECKS</a>
+                    <a class="nav-link" href="deck-library.php">DECKS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">BLOG</a>
+                    <a class="nav-link" href="#">ARTIGOS</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">INICIANTES</a>
@@ -77,10 +77,21 @@ require_once("cfg.php");
                 <li class="nav-item">
                     <a class="nav-link" href="#">CONTATO</a>
                 </li>
-                <li>
+                <li class="nav-item dropdown">
                     <?php 
                     if(isset($_COOKIE['login']) && $_COOKIE['login'] == "true"){
-                        echo '<a class="nav-link" href="encerrar_sessao.php">SAIR</a>';
+                        ?>
+
+                        <a class="nav-link dropdown-toggle" href="#" id="login-drop" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Olá, <?= $_COOKIE['name'] ?>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="login-drop">
+                            <a class="dropdown-item" href="#">Ver Perfil</a>
+                            <a class="dropdown-item" href="my-decks.php">Meus Decks</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="encerrar_sessao.php">SAIR</a>
+                        </div>
+                        <?php
                     }else{
                         echo '<a class="nav-link" href="entrar.php">ENTRAR</a>';
                     }

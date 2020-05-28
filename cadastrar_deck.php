@@ -1,4 +1,5 @@
 <?php
+require_once("check_sessao.php"); //check login
 require_once("initBD.php"); //iniciando conexão com base de dados
 require_once("vendor/autoload.php");
 use MikeReinders\RuneTerraPHP\DeckEncoding;
@@ -17,15 +18,18 @@ $chars_velhos = array("'", '"', "?");
 $chars_novos = array("&#39;", "&quot;", "&#63;");
 $name  = str_replace($chars_velhos, $chars_novos, $name);
 $description  = str_replace($chars_velhos, $chars_novos, $description);
+$timestamp = 
 
 $sql = "INSERT INTO decks (id, name, owner_id, code, description, tags, rating, list, timestamp) VALUES (NULL, '$name', '$owner_id', '$code', '$description', '$tags', '0', '$list', CURRENT_TIMESTAMP);";
-echo $sql;
+
 try {
+	//cadastrando deck
     $dbConn->beginTransaction();
     $stmt = $dbConn->prepare($sql);
     $stmt->execute();
     $dbConn->commit();
-    echo "ok";
+    
+    header("Location:my-decks.php");
 } catch (Exception $e) {
     //Roll back and show error
     $sql .=  "Error: " . $e->getMessage();

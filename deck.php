@@ -15,6 +15,14 @@ if(isset($_GET['id'])){
         $spell_array = array();
         
         foreach ($deck as $deck_info) {
+            ?>
+
+            <div class="banner banner-deck-creator">
+                <h1><?= $deck_info['name'] ?></h1>
+            </div>
+
+            <?php
+
             //extraindo dados do deck
             extract($deck_info);
 

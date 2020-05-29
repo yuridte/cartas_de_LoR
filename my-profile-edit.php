@@ -33,7 +33,7 @@ if (isset($_POST['acao']) && $_POST['acao'] == "update"){
 	    
 	    ?>
 		<script type="text/javascript">
-			// window.location.href = "my-profile.php?msg=update&msg2=<?= $msg; ?>";
+			window.location.href = "my-profile.php?msg=update&msg2=<?= $msg; ?>";
 		</script>
 		<?php
 	} catch (Exception $e) {
@@ -42,7 +42,7 @@ if (isset($_POST['acao']) && $_POST['acao'] == "update"){
 	    $dbConn->rollBack();
 	    ?>
 		<script type="text/javascript">
-			// window.location.href = "my-profile.php?msg=update&msg2=<?= $msg; ?>";
+			window.location.href = "my-profile.php?msg=update&msg2=<?= $msg; ?>";
 		</script>
 		<?php
 	}

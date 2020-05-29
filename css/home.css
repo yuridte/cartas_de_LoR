@@ -336,8 +336,140 @@ h3{
     border-radius: 10px;
 }
 .cadastro-box .form-group{
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
+
+/*Importar deck*/
+.importar-deck{
+    background-color: #424242;
+    border-radius: 20px;
+    text-transform: uppercase;
+    transition: .5s;
+    padding: 50px;
+    height: 100%;
+}
+.importar-deck:hover{
+    box-shadow: 
+        inset 0 0 60px whitesmoke,
+        inset 20px 0 80px #f0f,
+        inset -20px 0 80px #0ff,
+        inset 20px 0 300px #f0f,
+        inset -20px 0 300px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+}
+.importar-deck a{
+    font-size: 17px;
+    color: white;
+    width: 100;
+    height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+}
+.importar-deck img{
+    width: 80px;
+}
+.deck-box-container{
+    height: 100%;
+    background-image: url("../img/cardback/cb-fliperama.png");
+    background-size: cover;
+    box-shadow: inset 0 -4px 2px -1px #000;
+    padding: 0;
+    transition: .4s;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    z-index: 100;
+}
+.deck-box-container:hover {
+    box-shadow: 
+        inset 0 -4px 2px -1px #000,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+    z-index: 1000;
+}
+.deck-box-container a{
+    font-size: 20px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+.deck-box-container a span{
+    position: relative;
+    bottom: 0;
+}
+.deck-box{
+    text-transform: uppercase;
+    transition: .5s;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.deck-box .regions{
+    padding: 40px 0 10px 0;
+}
+.deck-box .regions img{
+    filter: drop-shadow(0 0 10px #000); 
+}
+.letreiro{
+    position: relative;
+    margin: 0;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    overflow: hidden;
+    font-family: headers;
+    font-size: 23px;
+    overflow: hidden;
+    text-transform: capitalize;
+    vertical-align: middle;
+    padding: 10px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.deck-list .col-md-3{
+    margin-bottom: 40px;
+    height: 217px;
+}
+.deck-lista h2{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.card-item{
+    background-size: cover;
+    background-position: center;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    color: black;
+    text-shadow:
+        1px 0 0 #fff, 
+        -1px 0 0 #fff, 
+        0 1px 0 #fff, 
+        0 -1px 0 #fff, 
+        1px 1px #fff, 
+        -1px -1px 0 #fff, 
+        1px -1px 0 #fff, 
+        -1px 1px 0 #fff;
+}
+.deck-lista a{
+    text-decoration: none;
+}
+.deck-code-box{
+    text-align: center;
+}
+.deck-code-box h1{
+    font-size: 50px;
+    padding-bottom: 20px; 
+}
+.deck-code-box p{
+    width: 100%;
+    word-break: break-all;
+    margin-bottom: 20px;
+}
+
 
 /* HOME SLIDER */
 .carousel{

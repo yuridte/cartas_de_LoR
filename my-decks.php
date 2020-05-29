@@ -8,13 +8,16 @@ require_once("header.php"); //cabeçalho do site
     <h1>Meus Decks</h1>
 </div>
 
-<div class="container margem-top-80">
+<div class="container margem-top-80 deck-list">
 	<div class="row">
-		<div class="col-md-4">
-			<!-- 
-				IMPORTAR DECK
-			-->
-			Importar
+		<div class="col-md-3 text-center" id="import-box">
+            <div class="importar-deck">
+                <a href='cadastro_deck.php'>
+                    <img src="img/plus.png"><br><br>
+        			<!-- IMPORTAR DECK -->
+                    Importar Deck
+                </a>
+            </div>
 		</div>
 
 		<!-- LISTA DE DECKS -->
@@ -25,16 +28,34 @@ require_once("header.php"); //cabeçalho do site
 
         //escrevendo os decks individualmente
         foreach ($decks_by_time as $deck) {
-        	echo "<div class='col-md-4'>";
-        	echo "<a href='deck.php?id=$deck[id]'>";
-        	echo $deck['name'];
-        	echo "</a>";
-        	echo "</div>";
-        }
-		?>
-	</div>
-</div>
+            $regions = explode("|", $deck['regions']);
+            ?>
 
+            <div class='col-md-3 text-center '>
+                <div class="deck-box-container">
+                    <a href='deck.php?id=<?= $deck['id']; ?>'>
+                        <div class="deck-box">
+                            <div class="regions">
+                                <?php 
+                                foreach ($regions as $region) {
+                                    echo '<img height="70px" title="' . $region . '" src="img/regions/hd/' . $region . '.png">';
+                                }
+                                ?>
+                                
+                            </div>
+                            <div class="letreiro">
+                                <span><?= $deck['name']; ?></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        <?php
+        }
+        ?>
+    </div>
+</div>
 
 <?php
 require_once("footer.php"); //rodapé do site

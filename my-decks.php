@@ -7,6 +7,41 @@ require_once("header.php"); //cabeçalho do site
 <div class="banner banner-my-decks">
     <h1>Meus Decks</h1>
 </div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 text-center">
+            <?php 
+            if (isset($_GET['msg'])) {
+                switch ($_GET['msg']) {
+                    case 'deck_created':
+                        echo '<div class="alert alert-success" role="alert">
+                                Deck criado com sucesso!
+                            </div>';
+                        break;
+
+                    case 'deck_removed':
+                        echo '<div class="alert alert-success" role="alert">
+                                Deck excluído com sucesso!
+                            </div>';
+                        break;
+
+                    case 'deck_updated':
+                        echo '<div class="alert alert-success" role="alert">
+                                Deck atualizado com sucesso!
+                            </div>';
+                        break;
+
+                    case 'error':
+                        echo '<div class="alert alert-danger" role="alert">
+                                Erro! Por favor tente novamente.
+                            </div>';
+                        break;
+                }
+            }
+            ?>
+        </div>
+    </div>
+</div>
 
 <div class="container margem-top-80 deck-list">
 	<div class="row">

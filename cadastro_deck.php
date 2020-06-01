@@ -7,6 +7,32 @@ require_once("header.php"); //cabeçalho do site
     <h1>Criador de decks</h1>
 </div>
 
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 text-center">
+            <?php 
+            if (isset($_GET['msg'])) {
+                switch ($_GET['msg']) {
+
+                    case 'error_code':
+                        echo '<div class="alert alert-danger" role="alert">
+                                Erro! Código inválido.
+                            </div>';
+                        break;
+
+                    case 'error':
+                        echo '<div class="alert alert-danger" role="alert">
+                                Erro! Por favor tente novamente.
+                            </div>';
+                        break;
+                }
+            }
+            ?>
+
+        </div>
+    </div>
+</div>
+
 <div class="container-fluid margem-top-80">
     <div class="row justify-content-md-center">
         <div class="col-md-6 cadastro-box">
@@ -18,10 +44,21 @@ require_once("header.php"); //cabeçalho do site
                     <input type="text" class="form-control" name="name" id="name"><br/><br/>
                 </div>
 
-
                 <div class="form-group">
                     <label for="code">Código</label><br/>
                     <input type="text" class="form-control" name="code" id="code"><br/><br/>
+                </div>
+
+                <div class="form-group">
+                    <label for="code">Arquétipo</label><br/>
+                    <select class="form-control" name="archetype" id="archetype">
+                        <option value="indefinido">Não sei</option>
+                        <option value="agressivo">Agressivo (Aggro)</option>
+                        <option value="combo">Combo</option>
+                        <option value="controle">Controle</option>
+                        <option value="midrange">Midrange</option>
+                    </select>
+                    <br/><br/>
                 </div>
 
                 <div class="form-group">

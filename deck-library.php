@@ -15,7 +15,7 @@ use Pagerfanta\Pagerfanta;
 
 		<!-- LISTA DE DECKS -->
 		<?php
-        $sql = "SELECT * FROM decks ORDER BY timestamp DESC;";
+        $sql = "SELECT * FROM decks ORDER BY last_update DESC;";
         //colocando em array
         $decks_by_time = $dbConn->query($sql)->fetchAll();
 

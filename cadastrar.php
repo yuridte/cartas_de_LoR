@@ -3,7 +3,7 @@ require_once("initBD.php"); //iniciando conexão com base de dados
 
 extract($_POST);
 $password = md5($password);
-$sql = "INSERT INTO user (id, name, email, password, description, likes, role, timestamp) VALUES (NULL, '$name', '$email', '$password', '$description', NULL, '1', CURRENT_TIMESTAMP);";
+$sql = "INSERT INTO user (id, name, email, password, description, likes, role, timestamp) VALUES (NULL, '$name', '$email', '$password', '$description', NULL, '3', CURRENT_TIMESTAMP);";
 
 $message = "";
 

@@ -69,13 +69,16 @@ require_once("cfg.php");
                     <a class="nav-link" href="deck-library.php">DECKS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ARTIGOS</a>
+                    <a class="nav-link" href="embreve.php">ARTIGOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">INICIANTES</a>
+                    <a class="nav-link" href="embreve.php">INICIANTES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">CONTATO</a>
+                    <a class="nav-link" href="embreve.php">RANKINGS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.php">CONTATO</a>
                 </li>
                 <li class="nav-item dropdown">
                     <?php 

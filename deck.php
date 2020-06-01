@@ -62,57 +62,53 @@ if(isset($_GET['id'])){
         ?>
 
 <div class="container margem-top-80 deck-lista">
-    <div class="row">
-        <div class="col-md-4">
-            <?php
-            //EXIBINDO O DECK
-            echo '<h2>Campeões</h2>';
-            foreach ($champions_array as $card) {
-                ?>
-                <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
-                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
-                    <?= $card['qt']; ?>x <?= $card['name']; ?><br>
-                </div>
-                </a>
-            <?php
+    <div class="row deck_session">
+        <?php 
+        if(isset($_COOKIE['id']) && $deck_info['owner_id'] == $_COOKIE['id']){
+        ?>
+        
+        <div class="col-md-12 text-center box-acao">
+            <a href="action_deck.php?id_deck=<?= $id ?>&action=editar"><button class="btn btn-success">Editar</button></a>
+            <a onclick="deleteDeck()"><button class="btn btn-danger">Remover</button></a>
+        </div>
+
+        <script type="text/javascript">
+            function deleteDeck() {
+                var ask = window.confirm("Tem certeza que quer apagar seu deck?");
+                if (ask) {
+                    window.location.href = "action_deck.php?id_deck=<?= $id ?>&action=remover";
+                }
+            }
+        </script>
+
+        <?php 
+        }
+        ?>
+
+        <div class="col-md-4 text-center">
+            <h2>REGIÕES</h2>
+
+            <?php 
+            $regions = explode("|", $deck_info['regions']);
+            foreach ($regions as $region) {
+                echo '<img height="130px" title="' . $region . '" src="img/regions/hd/' . $region . '.png">';
             }
             ?>
+
+            <h3> <b>Arquétipo: </b> <?= $deck_info['archetype']; ?></h3>
         </div>
 
         <div class="col-md-4">
-            <?php
-            //EXIBINDO O DECK
-            echo '<h2>Unidades</h2>';
-            foreach ($units_array as $card) {
-                ?>
-                <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
-                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
-                    <?= $card['qt']; ?>x <?= $card['name']; ?><br>
-                </div>
-                </a>
-            <?php
-            }
-            ?>
+            <h2>Descrição</h2>
+            <p><?= $deck_info['description'] ?></p>
+            <br><br>
+
+            <h2>Tags</h2>
+            <p><?= $deck_info['tags'] ?></p>
         </div>
 
-        <div class="col-md-4">
-            <?php
-            echo '<h2>Spells</h2>';
-            foreach ($spell_array as $card) {
-                ?>
-                <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
-                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
-                    <?= $card['qt']; ?>x <?= $card['name']; ?><br>
-                </div>
-                </a>
-            <?php
-            }
-            ?>
-        </div>
-
-        <div class="col-md-3"></div>
-        <div class="col-md-6 deck-code-box">
-            <h1>Código do Deck</h1>
+        <div class="col-md-4 deck-code-box">
+            <h2>Código do Deck</h2>
             <p><?= $deck_info['code'] ?></p>
             <button class="btn btn-primary" id="copyButton" onclick="copy_deck()">COPIAR</button>
 
@@ -135,7 +131,100 @@ if(isset($_GET['id'])){
 
         </div>
     </div>
+
+    <div class="row deck_session list-deck-session">
+
+        <div class="col-md-4">
+            <?php
+            //EXIBINDO O DECK
+            echo '<h2>Campeões</h2>';
+            foreach ($champions_array as $card) {
+                ?>
+                <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
+                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
+                    <?= $card['qt']; ?>x <?= $card['name']; ?><br>
+                </div>
+                <img src="img/cards_medium_size/<?= $card['cardCode']; ?>-medium.png">
+                </a>
+            <?php
+            }
+            ?>
+        </div>
+
+        <div class="col-md-4">
+            <?php
+            //EXIBINDO O DECK
+            echo '<h2>Unidades</h2>';
+            foreach ($units_array as $card) {
+                ?>
+                <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
+                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
+                    <?= $card['qt']; ?>x <?= $card['name']; ?><br>
+                </div>
+                <img src="img/cards_medium_size/<?= $card['cardCode']; ?>-medium.png">
+                </a>
+            <?php
+            }
+            ?>
+        </div>
+
+        <div class="col-md-4">
+            <?php
+            echo '<h2>Spells</h2>';
+            foreach ($spell_array as $card) {
+                ?>
+                <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
+                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
+                    <?= $card['qt']; ?>x <?= $card['name']; ?><br>
+                </div>
+                <img src="img/cards_medium_size/<?= $card['cardCode']; ?>-medium.png">
+                </a>
+            <?php
+            }
+            ?>
+        </div>
+
+
+    </div>
 </div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            
+            <!-- Plugins sociais -->
+            <div class="col-md-12 share-box">
+                <h3>Gostou da página? Compartilhe com seus amigos ...</h3>
+
+                <!-- facebook -->
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=1653095081584452&autoLogAppEvents=1"></script>
+                <div class="fb-share-button" data-href="https://<?php echo "$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]"; ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F<?php echo "$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]"; ?>%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
+
+                <!-- twitter -->
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="pt" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                <!-- pinterest -->
+                <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"
+                ></script>
+                <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"></a>
+
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(".list-deck-session a").hover(function(){
+            $(this).find("img").show();
+        }, function(){
+            $(this).find("img").hide();
+        });
+    });
+</script>
 
         <?php
         require_once("footer.php"); //rodapé do site

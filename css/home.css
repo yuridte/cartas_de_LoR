@@ -469,6 +469,24 @@ h3{
     word-break: break-all;
     margin-bottom: 20px;
 }
+.box-acao{
+    margin-bottom: 40px;
+}
+.box-acao button{
+    padding: 10px 30px;
+    margin: 0 40px 40px 40px;
+}
+.deck_session .col-md-4{
+    margin-bottom: 100px;
+}
+.deck_session h3{
+    text-transform: capitalize;
+}
+.list-deck-session img{
+    position: absolute; 
+    display: none;
+    z-index: 1000;
+}
 
 
 /* HOME SLIDER */

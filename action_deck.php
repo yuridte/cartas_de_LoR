@@ -104,7 +104,7 @@ if (isset($_GET['id_deck']) && isset($_GET['action'])) {
 
                             <div class="form-group">
                                 <label for="description">Descrição</label><br/>
-                                <textarea name="description" class="form-control" id="description" cols="30" rows="7" placeholder="Opcional"><?= $deck['name'] ?></textarea>
+                                <textarea name="description" class="form-control" id="description" cols="30" rows="7" placeholder="Opcional"><?= $deck['description'] ?></textarea>
                             </div>
                             
                             <br/><br/>

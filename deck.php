@@ -34,9 +34,9 @@ if(isset($_GET['id'])){
                 ///Vamos procurar as cartas e separar por tipo
                 if(isset($item_array[0])) : $cardCode = $item_array[0]; endif;
                 if(isset($item_array[1])) : $qt = $item_array[1]; endif;
-                $sql_card = "SELECT name, regionRef, type, supertype FROM cards WHERE cardCode LIKE '$cardCode'";
+                $sql_card = "SELECT name, cost, regionRef, type, supertype FROM cards WHERE cardCode LIKE '$cardCode'";
                 $card_array = $dbConn->query($sql_card)->fetchAll();
-                
+
                 foreach ($card_array as $card_info) {
 
                     //incluindo o cardCode e a quantidade
@@ -54,11 +54,32 @@ if(isset($_GET['id'])){
                         array_push($spell_array, $card_info);
                     }
 
+                    //curva de mana
+                    $custo = $card_info['cost'];
+                    for ($i=1; $i <= $qt ; $i++) { 
+                        $curva[$custo] = $i;
+                    }
+
                 }
 
             }
     
         }
+
+        // echo $curva[0] . "<br>";
+        // echo $curva[1] . "<br>";
+        // echo $curva[2] . "<br>";
+        // echo $curva[3] . "<br>";
+        // echo $curva[4] . "<br>";
+        // echo $curva[5] . "<br>";
+        // echo $curva[6] . "<br>";
+        // echo $curva[7] . "<br>";
+        // echo $curva[8] . "<br>";
+        // echo $curva[9] . "<br>";
+        // echo $curva[10] . "<br>";
+        // echo $curva[11] . "<br>";
+        // echo $curva[12] . "<br>";
+
         ?>
 
 <div class="container margem-top-80 deck-lista">

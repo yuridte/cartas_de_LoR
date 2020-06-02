@@ -269,8 +269,12 @@ h3{
     outline: none;
     background-color: transparent;
     border-color: #234d91;
-    color: #234d91;
+    color: #dedede;
     box-shadow: none;
+}
+option{
+    background-color: #424242;
+    text-transform: capitalize;
 }
 .filtro_regioes_galeria img, .filtro_raridades_galeria img{
     margin: 15px;
@@ -486,6 +490,25 @@ h3{
     position: absolute; 
     display: none;
     z-index: 1000;
+}
+.box-tags .tag{
+    float: left;
+    background-color: whitesmoke;
+    padding: 0px 15px;
+    color: black;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;     
+    line-height: 40px;
+}
+.datas_criacao_atualizacao{
+    font-weight: bolder;
+    font-size: 12px;
+    background-color: black;
+    border-radius: 15px;
+    padding: 2px 10px;
+    text-align: center; 
+    margin-bottom: 15px;
 }
 
 

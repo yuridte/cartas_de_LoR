@@ -115,17 +115,19 @@ if(isset($_GET['id'])){
                 echo '<img height="130px" title="' . $region . '" src="img/regions/hd/' . $region . '.png">';
             }
             ?>
-
-            <h3> <b>Arquétipo: </b> <?= $deck_info['archetype']; ?></h3>
         </div>
 
         <div class="col-md-4">
             <h2>Descrição</h2>
+            <?php 
+            $data_criacao = date('d/m/Y H:i',strtotime($deck_info['timestamp']));
+            $data_ultima_atualizacao = date('d/m/Y H:i',strtotime($deck_info['last_update']));
+             ?>
+            <div class="datas_criacao_atualizacao">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Criado em: <?= $data_criacao ?><br>
+                Atualizado em: <?= $data_ultima_atualizacao ?>        
+            </div>
             <p><?= $deck_info['description'] ?></p>
-            <br><br>
-
-            <h2>Tags</h2>
-            <p><?= $deck_info['tags'] ?></p>
         </div>
 
         <div class="col-md-4 deck-code-box">
@@ -206,6 +208,34 @@ if(isset($_GET['id'])){
         </div>
 
 
+    </div>
+
+    <div class="row deck_session">
+        <div class="col-md-4 text-center">
+            <h2>ARQUÉTIPO</h2>
+
+            <h3><?= $deck_info['archetype']; ?></h3>
+        </div>
+
+        <div class="col-md-4 box-tags">
+            <h2>Tags</h2>
+            <?php 
+            $tags = explode(",", $deck_info['tags']);
+            
+            foreach ($tags as $tag) {
+                if ($tag != "") {
+                    echo "<div class='tag'>" . $tag . "</div>";
+                }
+            }
+
+            ?>
+        </div>
+
+        <div class="col-md-4 text-center">
+            <h2>Curva de mana</h2>
+
+            <p><i>EM BREVE!</i></p>
+        </div>
     </div>
 </div>
 

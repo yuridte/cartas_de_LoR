@@ -14,6 +14,9 @@ use Pagerfanta\Pagerfanta;
 <div class="container container-padrao">
     <div class="row">
         <div class="col-md-12">
+            <button class="btn btn-primary"><img src="img/filter.png">FILTRAR</button>
+        </div>
+        <div class="col-md-12">
             <form method="GET">
                 <div class="form-group row">
             

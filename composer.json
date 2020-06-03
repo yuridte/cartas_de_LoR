@@ -1,6 +1,7 @@
 {
     "require": {
         "pagerfanta/pagerfanta": "^2.1",
-        "mike-reinders/runeterra-php": "^0.0.3"
+        "mike-reinders/runeterra-php": "^0.0.3",
+        "fortawesome/font-awesome": "^5.13"
     }
 }

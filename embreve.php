@@ -1,5 +1,4 @@
 <?php
-require_once("check_sessao.php"); //check login
 require_once("initBD.php"); //iniciando conexão com base de dados
 require_once("header.php"); //cabeçalho do site
 ?>

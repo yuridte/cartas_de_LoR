@@ -383,35 +383,13 @@ if(isset($_GET['cardCode'])) {
 
             </div>
         </div>
-        <?php } ?>
         <!-- FIM cartas relacionadas -->
+        <?php } 
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    
-                    <!-- Plugins sociais -->
-                    <div class="col-md-12 share-box">
-                        <h3>Gostou da página? Compartilhe com seus amigos ...</h3>
-
-                        <!-- facebook -->
-                        <div id="fb-root"></div>
-                        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=1653095081584452&autoLogAppEvents=1"></script>
-                        <div class="fb-share-button" data-href="https://<?php echo "$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]"; ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2F<?php echo "$_SERVER[HTTP_HOST].$_SERVER[REQUEST_URI]"; ?>%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
-
-                        <!-- twitter -->
-                        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-lang="pt" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-                        <!-- pinterest -->
-                        <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"
-                        ></script>
-                        <a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"></a>
-
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
+        
+        //incluindo sessão de compartilhamento
+        require_once('share-box.php');
+        ?>
 
     <?php
     }

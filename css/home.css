@@ -140,6 +140,11 @@ hr{
     -webkit-text-fill-color: white !important;
     text-shadow: 0 0 10px #000;
 }
+.banner-beginners{
+    background-image: url('../img/beginners.png');
+    background-size: cover;
+    background-position: center;
+}
 .container-padrao{
     padding: 50px 0;
 }
@@ -221,6 +226,46 @@ hr{
 }
 
 
+/*Beginners*/
+.container-beginners-msg{
+    background-color: rgb(66, 47, 39, .7);
+    padding: 30px;
+    margin-bottom: 50px;
+}
+.container-beginners-msg h2{
+    font-family: 'headers';
+    text-transform: none;
+    margin-bottom: 15px;
+    line-height: 50px;
+}
+.container-beginners-msg p{
+    line-height: 25px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.container-beginners-msg b{
+    font-weight: bold;
+    font-style: italic;
+}
+.container-beginners a img{
+    transition: .5s;
+    max-width: 100%;
+}
+.container-beginners a img:hover{
+    box-shadow:
+        inset 0 0 20px whitesmoke,
+        inset 20px 0 20px #f0f,
+        inset -20px 0 20px #0ff,
+        inset 20px 0 50px #f0f,
+        inset -20px 0 50px #0ff,
+        0 0 50px #fff,
+        -10px 0 80px #f0f,
+        10px 0 80px #0ff;
+        z-index: 10000;
+}
+
+
+
 /*Perfil*/
 .profile-box{
     background-color: rgb(0,0,0,.5);
@@ -252,6 +297,45 @@ h3{
     font-family: "nunito";
     margin-bottom: 25px;
 }
+.share-button{
+    color: white;
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .3s;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.share-button:hover{
+    color: white;
+    text-decoration: none;
+}
+.whatsapp-share-button{
+    background-color: #2ba624;
+}
+.whatsapp-share-button:hover{
+    background-color: #145210;
+}
+.facebook-share-button{
+    background-color: #076fe6;
+}
+.facebook-share-button:hover{
+    background-color: #023670;
+}
+.twitter-share-button{
+    background-color: #06c7bd;
+}
+.twitter-share-button:hover{
+    background-color: #03827b;
+}
+.pinterest-share-button{
+    background-color: #ff1919;
+}
+.pinterest-share-button:hover{
+    background-color: #a81313;
+}
+
+
 
 /*CSS para formulários*/
 .form-group div{

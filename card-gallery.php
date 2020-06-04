@@ -14,12 +14,11 @@ use Pagerfanta\Pagerfanta;
 <div class="container container-padrao">
     <div class="row">
         <div class="col-md-12">
-            <button class="btn btn-primary"><img src="img/filter.png">FILTRAR</button>
+            <button data-toggle="collapse" href="#filter-box" class="btn btn-primary"><i class="fas fa-filter"></i>&nbsp;FILTRAR</button>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 collapse" id="filter-box">
             <form method="GET">
                 <div class="form-group row">
-            
                     <div class="col-md-4">
                         <input type="text" class="form-control" name="name" id="name" placeholder="Nome da carta">
                     </div>

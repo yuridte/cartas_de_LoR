@@ -72,7 +72,7 @@ require_once("cfg.php");
                     <a class="nav-link" href="embreve.php">ARTIGOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="embreve.php">INICIANTES</a>
+                    <a class="nav-link" href="beginners.php">INICIANTES</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="embreve.php">RANKINGS</a>

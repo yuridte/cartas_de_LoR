@@ -13,7 +13,7 @@ use Pagerfanta\Pagerfanta;
 </div>
 <div class="container container-padrao">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 filter-button">
             <button data-toggle="collapse" href="#filter-box" class="btn btn-primary"><i class="fas fa-filter"></i>&nbsp;FILTRAR</button>
         </div>
         <div class="col-md-12 collapse" id="filter-box">

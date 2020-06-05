@@ -250,6 +250,10 @@ hr{
 .container-beginners a img{
     transition: .5s;
     max-width: 100%;
+    filter: grayscale(100%);
+}
+.container-beginners a img:hover{
+    filter: grayscale(0%);
 }
 .container-beginners a img:hover{
     box-shadow:
@@ -601,16 +605,78 @@ option{
 
 /* HOME SLIDER */
 .carousel{
+    margin-top: 100px;
     min-height: 420px;
+    margin-bottom: 20px;
 }
+.carousel img{
+    max-width: 100%;
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #000;
+    margin-bottom: 12px;
+}
+.iniciantes-banner h1{
+    margin-top: 70px;
+    font-size: 40px;
+    filter: drop-shadow(0 0 2px #000);
+}
+.iniciantes-banner h2{
+    font-size: 25px;
+    text-shadow: 0 0 5px #000;
+}
+.banner-1 h1{
+    margin-top: 50px;
+}
+.banner-1 h2{
+    font-size: 20px;
+    text-shadow: 0 0 5px #000;
+}
+.carousel a:hover{
+    text-decoration: none;
+}
+.home-box{
+    margin-bottom: 90px;
+}
+
+
 
 /* FOOTER */
 footer{
     margin-top: 80px;
+    background-color: #190029;
 }
 .footer-copyright{
     background-color: #21024a;
     color: whitesmoke;
+}
+.container-menu-footer h5{
+    margin-bottom: 10px;
+}
+.container-menu-footer a{
+    font-size: 13px;
+}
+.social-box-footer a{
+    font-size: 40px;
+    color: white;
+}
+.social-box-footer .facebook-link{
+    color: #076fe6;
+}
+.social-box-footer .twitter-link{
+    color: #06c7bd;
+}
+.social-box-footer .youtube-link{
+    color: red;
+}
+.social-box-footer .instagram-link{
+    color: #a44bdb;
+}
+.container-menu-footer{
+    padding: 35px 0;
+}
+.logo-footer img{
+    width: 100%;
 }
 
 
@@ -649,5 +715,10 @@ h2{
     }
     .carta-link{
         padding: 20px 80px ;
+    }
+
+    .iniciantes-banner h2{
+        margin-top: 0px;
+        font-size: 30px;
     }
 }

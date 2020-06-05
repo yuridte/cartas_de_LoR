@@ -48,18 +48,14 @@ require_once("cfg.php");
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    REGIÕES
+                    O JOGO
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">REGIÕES</a>
+                        <a class="dropdown-item" href="#">Palavras-Chave</a>
+                        <a class="dropdown-item" href="#">Cosméticos</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">ÁGUAS DE SENTINA</a>
-                        <a class="dropdown-item" href="#">DEMACIA</a>
-                        <a class="dropdown-item" href="#">FRELJORD</a>
-                        <a class="dropdown-item" href="#">ILHAS DAS SOMBRAS</a>
-                        <a class="dropdown-item" href="#">IONIA</a>
-                        <a class="dropdown-item" href="#">NOXUS</a>
-                        <a class="dropdown-item" href="#">PILTOVER & ZAUN</a>
+                        <a class="dropdown-item" href="#">GUIAS</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -75,7 +71,7 @@ require_once("cfg.php");
                     <a class="nav-link" href="beginners.php">INICIANTES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="embreve.php">RANKINGS</a>
+                    <a class="nav-link" href="embreve.php">Dicionário</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="contact.php">CONTATO</a>

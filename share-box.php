@@ -40,9 +40,7 @@
                     $link = "http://twitter.com/share" . $twitter_params . "";
                 ?>
 
-                <a class="share-button twitter-share-button" href="<?php echo $link; ?>"><i class="fab fa-twitter"></i> Compartilhar no Twitter</a>
-
-                <!-- Pinterest --><a href="http://pinterest.com/pin/create/button/?url={URI-encoded URL of the page to pin}&media={URI-encoded URL of the image to pin}&description={optional URI-encoded description}" class="share-button pinterest-share-button">
+                <a class="share-button twitter-share-button" href="<?php echo $link; ?>"><i class="fab fa-twitter"></i> Compartilhar no Twitter</a><a href="http://pinterest.com/pin/create/button/?url={URI-encoded URL of the page to pin}&media={URI-encoded URL of the image to pin}&description={optional URI-encoded description}" class="share-button pinterest-share-button">
                     <i class="fab fa-pinterest"></i> Marcar no Pinterest
                 </a>
 
@@ -59,12 +57,6 @@
                         document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
                     }, false);
                 </script>
-
-
-                <!-- foto do deck -->
-                <a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank" class="share-button whatsapp-share-button"><i class="fab fa-whatsapp"></i> Foto do deck</a>
-
-                
 
 
             </div>

@@ -225,6 +225,9 @@ hr{
 .margem-top-80{
     margin-top: 80px;
 }
+
+
+/*Creators*/
 .creators-box{
     background-image: url('../img/creators-bg.jpg');
     background-size: cover;
@@ -237,7 +240,52 @@ hr{
 .blog-box{
     padding: 50px 20px;
 }
+.banner-criadores-conteudo{
+    background-image: url('../img/creators.jpg');
+    background-position: center top;
+    background-size: cover;
+}
+.creator-container{
+}
+.creator-container .creator{
+    padding: 30px;
+    background-color: #1a1a1a;
+    margin-top: 50px;
+    box-shadow: 0 10px 10px #000;
+}
+.creator-container h2{
+    margin-bottom: 15px;
+}
+.creator-container p{
+    margin-bottom: 30px;
+}
+.creator-container a{
+    margin: 0 10px;
+}
 
+
+/*Artigos*/
+.artigo-container{
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin-top: 50px;
+    box-shadow: 0 10px 10px #000;
+    color: black;
+    font-size: 20px;
+}
+.artigo-container h2{
+    color: #21024a;
+    text-shadow: none;
+    margin: 20px;
+}
+
+
+/*termos e politica*/
+.banner-termos-politica{
+    background-image: url('../img/termos-politica.jpg');
+    background-position: center top;
+    background-size: cover;
+}
 
 
 /*Beginners*/
@@ -684,7 +732,10 @@ footer{
     color: red;
 }
 .social-box-footer .instagram-link{
-    color: #a44bdb;
+    color: #cc7dc5;
+}
+.social-box-footer .twitch-link{
+    color: #7232bd;
 }
 .container-menu-footer{
     padding: 35px 0;

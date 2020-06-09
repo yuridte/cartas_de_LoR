@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c> 
+
+RewriteEngine On 
+
+RewriteRule ^/?([A-Za-z0-9-]+)/?([A-Za-z0-9-]+)/?$ index.php?url=$1&s=$2 [NC,L] 
+
+
+</IfModule>

@@ -38,10 +38,16 @@
                         <a href="#!">Cosméticos</a>
                     </li>
                     <li>
+                        <a href="creators">Criadores de Conteúdo</a>
+                    </li>
+                    <li>
                         <a href="#!">FAQ</a>
                     </li>
                     <li>
-                        <a href="#!">Termos de uso</a>
+                        <a href="termos-de-uso">Termos de uso</a>
+                    </li>
+                    <li>
+                        <a href="politica-privacidade">Política de Privacidade</a>
                     </li>
                     <li>
                         <a href="#!">Sobre nós</a>

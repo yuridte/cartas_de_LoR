@@ -161,13 +161,28 @@ require_once("header.php");
     </div>
 </div>
 
-<div class="container-fluid">
-    <div class="col-sm-12">
-        <h2>Streamers</h2>
+<div class="container-fluid creators-box">
+    <div class="col-sm-12 creators">
+        <h2>Criadores de Conteúdo</h2>
         <hr>
     </div>
-    <div class="col-sm-12">
-        <h2>Últimos artigos</h2>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <h3>Uma das coisas mais legais do LoR é a comunidade que existe em torno do jogo. E muito disso se dá por conta do incrível trabalho dos criadores de conteúdo. Com certeza acompanhar um produtor de conteúdo é a melhor forma de aprender sobre o jogo e progredir nele. Além do mais, o jogo vai se tornar muito mais divertido!</h3>
+
+                <a href="creators.php" class="btn btn-primary">Ver Criadores &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid blog-box">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Últimos artigos</h2>
+            <hr>
+        </div>
     </div>
 </div>
 

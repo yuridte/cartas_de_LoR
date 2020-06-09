@@ -50,7 +50,6 @@
                 <!-- whatsapp -->
                 <a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank" class="share-button whatsapp-share-button"><i class="fab fa-whatsapp"></i> Enviar via WhatsApp</a>
                 
-                <!-- Você pode colocar este script num arquivo externo -->
                 <script type="text/javascript">
                     //Constrói a URL depois que o DOM estiver pronto
                     document.addEventListener("DOMContentLoaded", function() {
@@ -60,6 +59,13 @@
                         document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
                     }, false);
                 </script>
+
+
+                <!-- foto do deck -->
+                <a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank" class="share-button whatsapp-share-button"><i class="fab fa-whatsapp"></i> Foto do deck</a>
+
+                
+
 
             </div>
             

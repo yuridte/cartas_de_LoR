@@ -1,7 +1,7 @@
 <!-- Footer -->
 <footer class="page-footer font-small border-top">
-    <div class="container text-center text-md-left container-menu-footer">
-        <div class="row text-center">
+    <div class="container text-center text-md-left ">
+        <div class="row text-center container-menu-footer">
             <div class="col-md-3 mt-md-0 mt-3 logo-footer">
                 <a href="home.php"><img src="img/logo-mestres-de-runeterra.png"></a>
             </div>

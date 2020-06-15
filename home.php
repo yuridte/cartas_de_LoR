@@ -182,6 +182,21 @@ require_once("header.php");
         <div class="col-sm-12">
             <h2>Últimos artigos</h2>
             <hr>
+            <div class="col-md-6">
+                <?php 
+                $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY title ASC LIMIT 3";
+                $artigos_destaque = $dbConn->query($sql_blog_home)->fetchAll();
+
+                foreach ($artigos_destaque as $artigo) {
+                    extract($artigo);
+                    echo $title;
+                    echo "<br>";
+                }
+                ?>
+            </div>
+            <div class="col-md-6">
+                
+            </div>
         </div>
     </div>
 </div>

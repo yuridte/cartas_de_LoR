@@ -91,7 +91,7 @@ use Pagerfanta\Pagerfanta;
             }
         }
         if(isset($_GET['word']) && $_GET['word'] != ''){
-            $sql .= " description LIKE '%" . $_GET['word'] . "%' OR tags LIKE '%" . $_GET['word'] . "%' AND ";
+            $sql .= " description LIKE '%" . $_GET['word'] . "%' OR tags LIKE '%" . $_GET['word'] . "%' OR name LIKE '%" . $_GET['word'] . "%' AND ";
         }
 
         $sql .= " id NOT LIKE '0' ORDER BY last_update DESC;";

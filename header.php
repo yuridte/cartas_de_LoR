@@ -51,8 +51,8 @@ require_once("cfg.php");
                     O JOGO
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">REGIÕES</a>
-                        <a class="dropdown-item" href="#">Palavras-Chave</a>
+                        <a class="dropdown-item" href="regions.php">REGIÕES</a>
+                        <a class="dropdown-item" href="keywords.php">Palavras-Chave</a>
                         <a class="dropdown-item" href="#">Cosméticos</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">GUIAS</a>
@@ -65,7 +65,7 @@ require_once("cfg.php");
                     <a class="nav-link" href="deck-library.php">DECKS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="embreve.php">ARTIGOS</a>
+                    <a class="nav-link" href="blog.php">BLOG</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="beginners.php">INICIANTES</a>

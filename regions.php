@@ -19,53 +19,53 @@ require_once("header.php"); //cabeçalho do site
     </div>
 </div>
 
-
 <div class="container container-regions-list">
-    <div class="row text-center">
+    <div class="row text-center justify-content-center">
         <div class="col-md-3">
             <a href="region.php?region=Bilgewater">
-                <img src="img/regions/hd/Bilgewater.png" alt="Águas de Sentina"/>
+                <img src="img/regions/hd/Bilgewater_crest_icon.png" alt="Águas de Sentina"/>
                 <h2>Águas de Sentina</h2>
             </a>
         </div>
         <div class="col-md-3">
             <a href="region.php?region=Demacia">
-                <img src="img/regions/hd/Demacia.png" alt="Demacia"/>
+                <img src="img/regions/hd/Demacia_crest_icon.png" alt="Demacia"/>
                 <h2>Demacia</h2>
             </a>
         </div>
         <div class="col-md-3">
             <a href="region.php?region=Freljord">
-                <img src="img/regions/hd/Freljord.png" alt="Freljord"/>
+                <img src="img/regions/hd/Freljord_crest_icon.png" alt="Freljord"/>
                 <h2>Freljord</h2>
             </a>
         </div>
         <div class="col-md-3">
             <a href="region.php?region=ShadowIsles">
-                <img src="img/regions/hd/ShadowIsles.png" alt="Ilhas das Sombras"/>
+                <img src="img/regions/hd/ShadowIsles_crest_icon.png" alt="Ilhas das Sombras"/>
                 <h2>Ilhas das Sombras</h2>
             </a>
         </div>
         <div class="col-md-3">
             <a href="region.php?region=Ionia">
-                <img src="img/regions/hd/Ionia.png" alt="Ionia"/>
+                <img src="img/regions/hd/Ionia_crest_icon.png" alt="Ionia"/>
                 <h2>Ionia</h2>
             </a>
         </div>
         <div class="col-md-3">
             <a href="region.php?region=Noxus">
-                <img src="img/regions/hd/Noxus.png" alt="Noxus"/>
+                <img src="img/regions/hd/Noxus_crest_icon.png" alt="Noxus"/>
                 <h2>Noxus</h2>
             </a>
         </div>
         <div class="col-md-3">
             <a href="region.php?region=PiltoverZaun">
-                <img src="img/regions/hd/PiltoverZaun.png" alt="Piltover e Zaun"/>
+                <img src="img/regions/hd/PiltoverZaun_crest_icon.png" alt="Piltover e Zaun"/>
                 <h2>Piltover e Zaun</h2>
             </a>
         </div>
     </div>
 </div>
+
 
 
 <?php

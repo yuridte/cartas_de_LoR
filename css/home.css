@@ -771,6 +771,12 @@ option{
 .container-regions-list img{
     margin: 0 auto;
     max-width: 100%;
+    margin: 30px 0 20px 0;
+    transition: .5s;
+    height: 140px;
+}
+.container-regions-list img:hover{
+    filter: drop-shadow(0 0 5px #fff);
 }
 .regions-video{
     position: fixed;
@@ -827,6 +833,29 @@ option{
 .home-box{
     margin-bottom: 90px;
 }
+
+
+
+/*Palavras-chave*/
+.keyword-box h2 *{
+    vertical-align: middle;
+}
+.keyword-box h2{
+    text-align: left;
+}
+.keyword-box hr{
+    margin: 40px 0;
+}
+
+
+
+/*Dicionário*/
+.banner-dictionary{
+    background-image: url('../img/dictionary-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
 
 
 

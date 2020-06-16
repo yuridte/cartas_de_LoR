@@ -10,8 +10,6 @@ require_once("header.php");
 <div class="container creator-container">
 
     <div class="row artigo-container justify-content-center">
-        <?php 
-         ?>
         <div class="col-md-8 text-center">
             <h2>Anuncie seu trabalho aqui!</h2>
             <hr>
@@ -46,6 +44,13 @@ require_once("header.php");
         </div>
     <?php } ?>
 </div>
+
+<br><br><br>
+
+<?php 
+//incluindo sessão de compartilhamento
+include('share-box.php');
+?>
 
 <?php
 require_once("footer.php");

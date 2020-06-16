@@ -67,7 +67,18 @@ if(isset($_GET['slug'])) {
         include('share-box.php');
         ?>
 
-    <?php
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="fb-root"></div>
+                    <meta property="fb:app_id" content="183960886382685" />
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0&appId=183960886382685&autoLogAppEvents=1" nonce="HptluutG"></script>
+                    <div class="fb-comments" data-order-by="reverse_time" data-href="<?= $url_atual ?>" data-colorscheme="dark" data-numposts="5" data-width="100%"></div>
+                </div>
+            </div>
+        </div>
+
+        <?php
     }
 }else{
     //redirecionar para home

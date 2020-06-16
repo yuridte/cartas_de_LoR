@@ -1,23 +1,30 @@
-<?php 
+<?php
 require_once("initBD.php"); //iniciando conexão com base de dados
-require_once("header.php");
+require_once("header.php"); //cabeçalho do site
 require_once("vendor/autoload.php");
 use Pagerfanta\Adapter\ArrayAdapter;
 use Pagerfanta\Pagerfanta;
 ?>
 
-<div class="banner banner-blog">
-    <h1>Artigos</h1>
+<div class="banner banner-dictionary">
+    <h1>Dicionário Interativo</h1>
 </div>
 
-<div class="container container-padrao container-blog">
-
-    <?php 
-    $sql = "SELECT * FROM articles WHERE category NOT LIKE 'beginners-1' AND category NOT LIKE 'beginners-2';";
-    $artigos_array = $dbConn->query($sql)->fetchAll();
+<div class="container">
+    <div class="row artigo-container justify-content-center">
+        <div class="col-md-8 text-center">
+            <p>Se houver algum termo que queira adicionar ao dicionário fale comigo no formulário de contato ou nas redes sociais.</p>
+        </div>
+    </div>
+</div>
+<br><br><br><br><br>
+<div class="container">
+    <?php
+    $sql = "SELECT * FROM dictionary ORDER BY term ASC;";
+    $dictionary_array = $dbConn->query($sql)->fetchAll();
 
     //Paginando
-    $adapter = new ArrayAdapter($artigos_array);
+    $adapter = new ArrayAdapter($dictionary_array);
     $pagerfanta = new Pagerfanta($adapter);
 
     //setando página atual
@@ -28,39 +35,27 @@ use Pagerfanta\Pagerfanta;
         $pagina_atual = 1;
     }
 
-    $pagerfanta->setMaxPerPage(10); // 10 by default
+    $pagerfanta->setMaxPerPage(28); // 10 by default
 
     try {
         $pagerfanta->setCurrentPage($pagina_atual); // 1 by default
 
         $currentPageResults = $pagerfanta->getCurrentPageResults();
         
-        foreach ($currentPageResults as $artigo) {
-            extract($artigo);
-        ?>
-
-            <div class="row justify-content-center artigo-container">
-                <div class="col-md-4">
-                    <a href="artigo.php?slug=<?= $slug ?>">
-                        <img width="100%" src="uploads/blog-thumbs/<?= $id ?>">
-                    </a>
+        foreach ($currentPageResults as $entry) {
+            extract($entry);
+            ?>
+            <div class="row justify-content-center keyword-box">
+                <div class="col-md-5 text-left">
+                    <h2><span><?= $term ?></span></h2>
                 </div>
-                <div class="col-md-8 text-left">
-                    <a href="artigo.php?slug=<?= $slug ?>"><h2><?= $title ?></h2></a>
-                    <small><?= $timestamp ?></small>
-                    <small><?= $category ?></small>
-                    <?php 
-                    $sql_autor = "SELECT * FROM user WHERE id LIKE '" . $owner_id . "';";
-                    $autor_array = $dbConn->query($sql_autor)->fetchAll();
-                    foreach ($autor_array as $autor) {
-                    ?>
-                        <span>Autor: <b><i><?= $autor['name'] ?></i></b></span>
-                    <?php 
-                    } 
-                    ?>
+                <div class="col-md-4">
+                    <p><?= $meaning ?></p>
+                </div>
+                <div class="col-md-8">
+                    <hr>
                 </div>
             </div>
-
         <?php
         }
     } catch (\Throwable $th) {
@@ -68,16 +63,14 @@ use Pagerfanta\Pagerfanta;
         exit();
     }
     ?>
-
 </div>
-
 
 <ul class="pagination justify-content-center flex-wrap">
     <?php
     //links para cada página
     if ($pagerfanta->hasPreviousPage()) {
         $previousPage = $pagerfanta->getPreviousPage();
-        echo "<li class='page-item width-47'><a class='page-link' href='?pagina=$previousPage'>
+        echo "<li class='page-item width-47'><a class='page-link' href='?pagina=$previousPage$url_get'>
         <span aria-hidden=\"true\">&laquo;</span>
         <span class=\"sr-only\">Anterior</span>
         </a></li>";
@@ -98,13 +91,13 @@ use Pagerfanta\Pagerfanta;
             if($pagina < 10) {
                 $pagina = "0".$pagina;
             }
-            echo "<li class='page-item'><a class='page-link' href='?pagina=$pagina'>$pagina</a></li>";
+            echo "<li class='page-item'><a class='page-link' href='?pagina=$pagina$url_get'>$pagina</a></li>";
         }    
     }
 
     if ($pagerfanta->hasNextPage()) {
         $nextPage = $pagerfanta->getNextPage();
-        echo "<li class='page-item width-47'><a class='page-link' href='?pagina=$nextPage'>
+        echo "<li class='page-item width-47'><a class='page-link' href='?pagina=$nextPage$url_get'>
         <span aria-hidden=\"true\">&raquo;</span>
         <span class=\"sr-only\">Próximo</span>
         </a></li>";
@@ -114,7 +107,11 @@ use Pagerfanta\Pagerfanta;
 </ul>
 
 
+<br><br><br>
 
-<?php
-require_once("footer.php");
+
+<?php 
+//incluindo sessão de compartilhamento
+include('share-box.php');
+require_once("footer.php"); //rodapé do site
 ?>

@@ -31,7 +31,7 @@ if (isset($_GET['region'])) {
         </div>
 
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <div class="col-md-12">
                     <h2>Campeões</h2>
                 </div>

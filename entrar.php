@@ -58,6 +58,7 @@ require_once("header.php"); //cabeçalho do site
 
                 <input type="submit" class="btn btn-primary" value="Entrar"><br><br>
                 <div class="text-right">
+                    <a href="reset_pwd.php" style="float: left;">Esqueceu a senha?</a>
                     <a href="cadastro.php">Clique aqui para se cadastrar</a>
                 </div>
             </form>

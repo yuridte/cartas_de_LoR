@@ -11,7 +11,7 @@ if (isset($_GET['region'])) {
         extract($region);
         ?>
 
-        <video autoplay muted loop class="regions-video">
+        <video autoplay muted loop class="regions-video" id="regions-video">
             <source src="video/<?= $regionRef ?>-splashvideo.webm" type="video/webm">
         </video>
 
@@ -29,6 +29,23 @@ if (isset($_GET['region'])) {
                 </div>
             </div>
         </div>
+
+        <br><br><br>
+
+        <div class="container cosmeticos-regiao">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h2>Tabuleiro</h2><br>
+                    <img src="img/board/board_<?= $regionRef ?>.jpg" alt="Tabuleiro <?= $name ?>">
+                </div>
+                <div class="col-md-4">
+                    <h2>Cardback</h2><br>
+                    <img src="img/cardback/cardback_<?= $regionRef ?>.jpg" alt="Cardback <?= $name ?>">
+                </div>
+            </div>
+        </div>
+
+        <br><br><br><br><br>
 
         <div class="container">
             <div class="row justify-content-center">

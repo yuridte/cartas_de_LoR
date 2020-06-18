@@ -53,7 +53,7 @@ require_once("cfg.php");
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="regions.php">REGIÕES</a>
                         <a class="dropdown-item" href="keywords.php">Palavras-Chave</a>
-                        <a class="dropdown-item" href="#">Cosméticos</a>
+                        <a class="dropdown-item" href="cosmetics">Cosméticos</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">GUIAS</a>
                     </div>

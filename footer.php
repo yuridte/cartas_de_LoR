@@ -32,10 +32,10 @@
             <div class="col-md-3 mb-md-0 mb-3">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="#!">Regiões</a>
+                        <a href="regions">Regiões</a>
                     </li>
                     <li>
-                        <a href="#!">Cosméticos</a>
+                        <a href="cosmetics">Cosméticos</a>
                     </li>
                     <li>
                         <a href="creators">Criadores de Conteúdo</a>

@@ -32,25 +32,22 @@
             <div class="col-md-3 mb-md-0 mb-3">
                 <ul class="list-unstyled">
                     <li>
-                        <a href="regions">Regiões</a>
+                        <a href="regions.php">Regiões</a>
                     </li>
                     <li>
-                        <a href="cosmetics">Cosméticos</a>
+                        <a href="cosmetics.php">Cosméticos</a>
                     </li>
                     <li>
-                        <a href="creators">Criadores de Conteúdo</a>
+                        <a href="creators.php">Criadores de Conteúdo</a>
                     </li>
                     <li>
-                        <a href="#!">FAQ</a>
+                        <a href="termos-de-uso.php">Termos de uso</a>
                     </li>
                     <li>
-                        <a href="termos-de-uso">Termos de uso</a>
+                        <a href="politica-privacidade.php">Política de Privacidade</a>
                     </li>
                     <li>
-                        <a href="politica-privacidade">Política de Privacidade</a>
-                    </li>
-                    <li>
-                        <a href="#!">Sobre nós</a>
+                        <a href="sobre-nos.php">Sobre nós</a>
                     </li>
                 </ul>
             </div>

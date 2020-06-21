@@ -7,6 +7,11 @@ use Pagerfanta\Pagerfanta;
 ?>
 
 <script type="text/javascript" src="js/filtro_front.js"></script>
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Decks - " + title_topo_atual;
+</script>
 
 <div class="banner banner-deck-creator">
     <h1>Biblioteca de Decks</h1>

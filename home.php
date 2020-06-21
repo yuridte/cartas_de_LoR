@@ -18,7 +18,7 @@ require_once("header.php");
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1>Seja bem-vindo!</h1>
-                    <h2>Leia a minha <a href="contato.php">mensagem</a> de boas-vindas!</h2>
+                    <h2>Leia a minha <a href="artigo.php?slug=mensagem-de-boas-vindas">mensagem</a> de boas-vindas!</h2>
                 </div>
             </div>
         </div>
@@ -108,6 +108,15 @@ require_once("header.php");
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-12 gotometa">
+                <div class="container">
+                    <a href="meta.php">
+                        <img src="img/decks-meta-link.jpg" width="100%" alt="Decks do Meta">
+                    </a>
+                </div>
+            </div>
+
             <div class="col-sm-12 home-box">
                 <h2>Decks mais novos</h2>
                 <hr>
@@ -177,26 +186,57 @@ require_once("header.php");
     </div>
 </div>
 
-<div class="container-fluid blog-box">
+<div class="container blog-box-home">
     <div class="row">
         <div class="col-sm-12">
             <h2>Últimos artigos</h2>
             <hr>
-            <div class="col-md-6">
-                <?php 
-                $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY title ASC LIMIT 3";
-                $artigos_destaque = $dbConn->query($sql_blog_home)->fetchAll();
+        </div>
+        <?php 
+        $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY title ASC LIMIT 1";
+        $artigos_destaque = $dbConn->query($sql_blog_home)->fetchAll();
 
-                foreach ($artigos_destaque as $artigo) {
-                    extract($artigo);
-                    echo $title;
-                    echo "<br>";
-                }
-                ?>
+        foreach ($artigos_destaque as $artigo) {
+            extract($artigo);
+        ?>
+        <div class="col-md-5 text-center">
+            <a href="artigo.php?slug=<?= $slug ?>">
+                <img src="uploads/blog-thumbs/<?= $id ?>.jpg">
+                <span><?= $title ?></span>
+            </a>
+        </div>
+        <?php
+        }
+        ?>
+        <div class="col-md-7">
+            <?php 
+            $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY title ASC LIMIT 1,3";
+            $artigos_destaque = $dbConn->query($sql_blog_home)->fetchAll();
+
+            foreach ($artigos_destaque as $artigo) {
+                extract($artigo);
+            ?>
+            <div class="text-left small-list-blog">
+                <a href="artigo.php?slug=<?= $slug ?>">
+                    <table>
+                        <tr>
+                            <td>
+                                <img src="uploads/blog-thumbs/<?= $id ?>.jpg">
+                            </td>
+                            <td>
+                                <span><?= $title ?></span>
+                            </td>
+                        </tr>
+                    </table>
+                </a>
             </div>
-            <div class="col-md-6">
-                
-            </div>
+            <?php
+            }
+            ?>
+        </div>
+        <div class="col-md-12 text-center">
+            <br><br>
+            <a href="blog.php" class="btn btn-primary">Ver mais artigos &rarr;</a>
         </div>
     </div>
 </div>

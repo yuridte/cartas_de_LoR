@@ -3,6 +3,12 @@ require_once("initBD.php"); //iniciando conexão com base de dados
 require_once("header.php");
 ?>
 
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Criadores de Conteúdo - " + title_topo_atual;
+</script>
+
 <div class="banner banner-criadores-conteudo">
     <h1>Criadores de Conteúdo</h1>
 </div>

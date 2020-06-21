@@ -7,6 +7,11 @@ use Pagerfanta\Pagerfanta;
 ?>
 
 <script type="text/javascript" src="js/filtro_front.js"></script>
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Galeria de cartas - " + title_topo_atual;
+</script>
 
 <div class="banner banner-galeria-cartas">
     <h1>Galeria de Cartas</h1>
@@ -20,7 +25,7 @@ use Pagerfanta\Pagerfanta;
             <form method="GET">
                 <div class="form-group row">
                     <div class="col-md-4">
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Nome da carta">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Nome da carta ou texto dela">
                     </div>
                     <div class="col-md-4">
                         <select class="form-control" name="type">
@@ -79,7 +84,7 @@ use Pagerfanta\Pagerfanta;
         //colocar os filtros
         //
         if(isset($_GET['name']) && $_GET['name'] != ""){
-            $sql .= "name LIKE '%" . $_GET['name'] . "%' AND ";
+            $sql .= "(name LIKE '%" . $_GET['name'] . "%' OR description LIKE '%" . $_GET['name'] . "%') AND ";
             $url_get .= "name=".$_GET['name'] . "&";
         }
         if(isset($_GET['regionRef']) && $_GET['regionRef'] != ""){

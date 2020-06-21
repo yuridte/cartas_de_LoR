@@ -1,6 +1,13 @@
 <?php
 require_once("header.php"); //cabeçalho do site
 ?>
+
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Contate-nos - " + title_topo_atual;
+</script>
+
 <div id="background-video" class="intern-pages-video-bg">
     <video autoplay loop autobuffer muted playsinline src="video/<?= $splash_video ?>" id="bg-video"></video>
 </div>

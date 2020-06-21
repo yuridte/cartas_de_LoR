@@ -67,7 +67,7 @@ i{
     z-index: 1000;
 }
 .navbar-dark .navbar-nav .nav-link{
-    color: #cc8e12;
+    color: whitesmoke;
     text-shadow: 0 0 3px black;
     font-size: 20px;
 }
@@ -172,6 +172,48 @@ hr{
 .info-grid td img{
     height: 30px;
     vertical-align: middle;
+}
+.gotometa{
+    margin-bottom: 70px;
+}
+.gotometa img{
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px #000;
+}
+.blog-box-home{
+    margin-top: 70px;
+}
+.blog-box-home a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+.blog-box-home img{
+    width: 100%;
+    border-radius: 15px;
+}
+.blog-box-home span{
+    font-family: "montserrat";
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.blog-box-home .small-list-blog img{
+    width: 100%;
+    vertical-align: middle;
+}
+.blog-box-home .small-list-blog span{
+    font-size: 20px;
+    vertical-align: middle;
+}
+.blog-box-home .small-list-blog{
+    margin-bottom: 30px;
+}
+.blog-box-home .small-list-blog table tr td:first-child{
+    width: 20%;
+}
+.blog-box-home .small-list-blog table tr td:last-child{
+    padding-left: 15px;
 }
 .modal-dialog img{
     width: 100%;
@@ -301,6 +343,9 @@ hr{
 .artigo-container p{
     margin-bottom: 15px;
     line-height: 30px;
+}
+.artigo-container p.code{
+    word-break: break-all;
 }
 .artigo-container .box-tags .tag{
     background-color: #333333;
@@ -433,6 +478,21 @@ hr{
 }
 
 
+
+/*Guias*/
+.banner-guias{
+    background-image: url("../img/guias.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.guias-box h1{
+    font-size: 45px;
+    padding: 20px;
+    color: white;
+}
+
+
+
 /*share-box*/
 .share-box{
     background-color: #100130;
@@ -447,7 +507,7 @@ h3{
 .share-button{
     color: white;
     font-size: 15px;
-    padding: 5px 10px;
+    padding: 0px 10px;
     border-radius: 5px;
     transition: .3s;
     margin-right: 10px;
@@ -1023,6 +1083,12 @@ h2{
 
     .iniciantes-banner h2{
         margin-top: 0px;
-        font-size: 30px;
+        font-size: 20px;
+    }
+    .iniciantes-banner h1 {
+        display: none;
+        margin-top: 0px;
+        font-size: 40px;
+        filter: drop-shadow(0 0 2px #000);
     }
 }

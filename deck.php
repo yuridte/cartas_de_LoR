@@ -22,6 +22,12 @@ if(isset($_GET['id'])){
                 <h1><?= $deck_info['name'] ?></h1>
             </div>
 
+            <script type="text/javascript">
+                // Mudando o title
+                var title_topo_atual = document.title;
+                document.title = "Deck - <?= $deck_info['name'] ?> - " + title_topo_atual;
+            </script>
+
             <?php
 
             //extraindo dados do deck

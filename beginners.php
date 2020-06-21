@@ -1,7 +1,15 @@
 <?php
 require_once("initBD.php"); //iniciando conexão com base de dados
 require_once("header.php"); //cabeçalho do site
+?>
 
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Iniciantes - " + title_topo_atual;
+</script>
+
+<?php
 if (isset($_GET['parte'])) {
     switch ($_GET['parte']) {
         case '1':
@@ -24,7 +32,7 @@ if (isset($_GET['parte'])) {
                     <div class="row justify-content-center artigo-container">
                         <div class="col-md-4">
                             <a href="artigo.php?slug=<?= $slug ?>">
-                                <img width="100%" src="uploads/blog-thumbs/<?= $id ?>">
+                                <img width="100%" src="uploads/blog-thumbs/<?= $id ?>.jpg">
                             </a>
                         </div>
                         <div class="col-md-8 text-left">
@@ -73,7 +81,7 @@ if (isset($_GET['parte'])) {
                     <div class="row justify-content-center artigo-container">
                         <div class="col-md-4">
                             <a href="artigo.php?slug=<?= $slug ?>">
-                                <img width="100%" src="uploads/blog-thumbs/<?= $id ?>">
+                                <img width="100%" src="uploads/blog-thumbs/<?= $id ?>.jpg">
                             </a>
                         </div>
                         <div class="col-md-8 text-left">
@@ -121,7 +129,7 @@ if (isset($_GET['parte'])) {
                     <div class="row justify-content-center artigo-container">
                         <div class="col-md-4">
                             <a href="artigo.php?slug=<?= $slug ?>">
-                                <img width="100%" src="uploads/blog-thumbs/<?= $id ?>">
+                                <img width="100%" src="uploads/blog-thumbs/<?= $id ?>.jpg">
                             </a>
                         </div>
                         <div class="col-md-8 text-left">

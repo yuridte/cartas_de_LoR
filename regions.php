@@ -1,6 +1,11 @@
 <?php
 require_once("header.php"); //cabeçalho do site
 ?>
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Regiões - " + title_topo_atual;
+</script>
 
 <div class="banner banner-regions">
     <h1>Regiões</h1>

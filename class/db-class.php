@@ -71,18 +71,7 @@ class DB{
     
         try {
             //open connection
-            $dbConnection = new PDO("mysql:
-                    host=$this->host;
-                    port=$this->port;
-                    dbname=$this->dbName;
-                    charset=utf8mb4", 
-                $this->user, 
-                $this->password, 
-                array(
-                    PDO::ATTR_ERRMODE, 
-                    PDO::ERRMODE_EXCEPTION
-                    )
-                );
+            $dbConnection = new PDO("mysql:host=$this->host;dbname=$this->dbName;charset=utf8", $this->user, $this->password);
 
             return $dbConnection;
             

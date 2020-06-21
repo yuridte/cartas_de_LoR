@@ -10,9 +10,17 @@ if(isset($_GET['slug'])) {
 
     foreach ($artigo_array as $artigo) {
         extract($artigo);
+        $titulo_share = $title;
+        $imagem_share = "uploads/blog-thumbs/$id";
         ?>
 
-        <div class="banner banner-carta" style="background-image: url('uploads/blog-thumbs/<?= $id ?>');">
+        <script type="text/javascript">
+            // Mudando o title
+            var title_topo_atual = document.title;
+            document.title = "<?= $title ?> - " + title_topo_atual;
+        </script>
+
+        <div class="banner banner-carta" style="background-image: url('uploads/blog-thumbs/<?= $id ?>.jpg');">
             <br><br>
             <h1><?= $title ?></h1>
         </div>

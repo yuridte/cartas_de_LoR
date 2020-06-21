@@ -6,6 +6,12 @@ use Pagerfanta\Adapter\ArrayAdapter;
 use Pagerfanta\Pagerfanta;
 ?>
 
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Artigos - " + title_topo_atual;
+</script>
+
 <div class="banner banner-blog">
     <h1>Artigos</h1>
 </div>
@@ -13,7 +19,7 @@ use Pagerfanta\Pagerfanta;
 <div class="container container-padrao container-blog">
 
     <?php 
-    $sql = "SELECT * FROM articles WHERE category NOT LIKE 'beginners-1' AND category NOT LIKE 'beginners-2';";
+    $sql = "SELECT * FROM articles WHERE category NOT LIKE 'beginners-1' AND category NOT LIKE 'beginners-2' AND category NOT LIKE 'beginners-3' AND category NOT LIKE 'guides' ORDER BY timestamp DESC;";
     $artigos_array = $dbConn->query($sql)->fetchAll();
 
     //Paginando
@@ -42,7 +48,7 @@ use Pagerfanta\Pagerfanta;
             <div class="row justify-content-center artigo-container">
                 <div class="col-md-4">
                     <a href="artigo.php?slug=<?= $slug ?>">
-                        <img width="100%" src="uploads/blog-thumbs/<?= $id ?>">
+                        <img width="100%" src="uploads/blog-thumbs/<?= $id ?>.jpg">
                     </a>
                 </div>
                 <div class="col-md-8 text-left">

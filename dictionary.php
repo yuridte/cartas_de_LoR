@@ -6,8 +6,14 @@ use Pagerfanta\Adapter\ArrayAdapter;
 use Pagerfanta\Pagerfanta;
 ?>
 
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Dicionário de Termos - " + title_topo_atual;
+</script>
+
 <div class="banner banner-dictionary">
-    <h1>Dicionário Interativo</h1>
+    <h1>Dicionário de Termos</h1>
 </div>
 
 <div class="container">

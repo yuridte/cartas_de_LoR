@@ -11,6 +11,12 @@ if (isset($_GET['region'])) {
         extract($region);
         ?>
 
+        <script type="text/javascript">
+            // Mudando o title
+            var title_topo_atual = document.title;
+            document.title = "<?= $name ?> - " + title_topo_atual;
+        </script>
+
         <video autoplay muted loop class="regions-video" id="regions-video">
             <source src="video/<?= $regionRef ?>-splashvideo.webm" type="video/webm">
         </video>

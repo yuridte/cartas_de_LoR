@@ -2,6 +2,12 @@
 require_once("header.php"); //cabeçalho do site
 ?>
 
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Cosméticos - " + title_topo_atual;
+</script>
+
 <div class="banner banner-cosmetics">
     <h1>Cosméticos</h1>
 </div>

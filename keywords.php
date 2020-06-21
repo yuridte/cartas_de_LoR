@@ -3,6 +3,12 @@ require_once("initBD.php"); //iniciando conexão com base de dados
 require_once("header.php"); //cabeçalho do site
 ?>
 
+<script type="text/javascript">
+    // Mudando o title
+    var title_topo_atual = document.title;
+    document.title = "Palavras-chave - " + title_topo_atual;
+</script>
+
 <div class="banner banner-palavras-chave">
     <h1>Palavras-chave</h1>
 </div>
@@ -25,7 +31,7 @@ require_once("header.php"); //cabeçalho do site
         ?>
         <div class="row justify-content-center keyword-box">
             <div class="col-md-5 text-left">
-                <h2><img src="img/keywords/Keyword_<?= $ref ?>" alt="<?= $name ?>" onerror="this.style.display='none'"> <span><?= $name ?></span></h2>
+                <h2><img src="img/keywords/Keyword_<?= $ref ?>.png" alt="<?= $name ?>" onerror="this.style.display='none'"> <span><?= $name ?></span></h2>
             </div>
             <div class="col-md-4">
                 <p><?= $description ?></p>

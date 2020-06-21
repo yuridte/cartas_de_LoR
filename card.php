@@ -12,6 +12,12 @@ if(isset($_GET['cardCode'])) {
         extract($card_info);
         ?>
 
+        <script type="text/javascript">
+            // Mudando o title
+            var title_topo_atual = document.title;
+            document.title = title_topo_atual + " - <?= $name ?>";
+        </script>
+
         <div class="banner banner-carta" style="background-image: url('img/cards_medium_size/<?= $cardCode ?>-full-medium.png');">
             <h1><?= $name ?></h1>
         </div>

@@ -8,14 +8,7 @@
                 <h3>Gostou da página? Compartilhe com seus amigos ...</h3>
 
                 <!-- facebook -->
-                <a id="facebook-Link" class="share-button facebook-share-button"
-                    href="http://www.facebook.com/sharer.php?
-                    s=100
-                    &p[url]=''
-                    &p[images][0]=''
-                    &p[title]=''
-                    &p[summary]=''" 
-                    target="_blank">
+                <a id="facebook-Link" type="button" class="share-button facebook-share-button" href="https://www.facebook.com/sharer.php?u=<?= $url_atual ?>" target="_new">
                         <i class="fab fa-facebook"></i> Compartilhar no Facebook
                 </a>
                 <script type="text/javascript">
@@ -28,9 +21,9 @@
 
                 <!-- twitter -->
                 <?php
-                    $title = 'Title here';
-                    $short_url = 'http://shorturl.co';
-                    $url = 'http://fullurl.com';
+                    $title = 'Mestres de Runeterra';
+                    $short_url = $url_atual;
+                    $url = $url_atual;
                     $twitter_params = 
                     '?text=' . urlencode($title) . '+-' .
                     '&amp;url=' . urlencode($short_url) . 
@@ -40,13 +33,16 @@
                     $link = "http://twitter.com/share" . $twitter_params . "";
                 ?>
 
-                <a class="share-button twitter-share-button" href="<?php echo $link; ?>"><i class="fab fa-twitter"></i> Compartilhar no Twitter</a><a href="http://pinterest.com/pin/create/button/?url={URI-encoded URL of the page to pin}&media={URI-encoded URL of the image to pin}&description={optional URI-encoded description}" class="share-button pinterest-share-button">
+                <a class="share-button twitter-share-button" type="button" href="<?php echo $link; ?>" target="_new"><i class="fab fa-twitter"></i> Compartilhar no Twitter</a>
+
+                <!-- Pinterest -->
+                <!-- <a href="http://pinterest.com/pin/create/button/?url=<?= $url_atual ?>&media=<?= $imagem_share ?>" type="button" target="_new" class="share-button pinterest-share-button">
                     <i class="fab fa-pinterest"></i> Marcar no Pinterest
-                </a>
+                </a> -->
 
 
                 <!-- whatsapp -->
-                <a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank" class="share-button whatsapp-share-button"><i class="fab fa-whatsapp"></i> Enviar via WhatsApp</a>
+                <a href="" id="whatsapp-share-btt" rel="nofollow" target="_blank" type="button" class="share-button whatsapp-share-button"><i class="fab fa-whatsapp"></i> Enviar via WhatsApp</a>
                 
                 <script type="text/javascript">
                     //Constrói a URL depois que o DOM estiver pronto

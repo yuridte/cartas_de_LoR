@@ -4,6 +4,10 @@ require_once("cfg.php");
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+    <!-- Adsense -->
+    <script data-ad-client="ca-pub-2794347980659340" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-36323975-8"></script>
     <script>
@@ -53,9 +57,9 @@ require_once("cfg.php");
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="regions.php">REGIÕES</a>
                         <a class="dropdown-item" href="keywords.php">Palavras-Chave</a>
-                        <a class="dropdown-item" href="cosmetics">Cosméticos</a>
+                        <a class="dropdown-item" href="cosmetics.php">Cosméticos</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">GUIAS</a>
+                        <a class="dropdown-item" href="guides.php">GUIAS</a>
                     </div>
                 </li>
                 <li class="nav-item">

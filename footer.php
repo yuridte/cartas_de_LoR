@@ -6,7 +6,7 @@
                 <a href="home.php"><img src="img/logo-mestres-de-runeterra.png"></a>
             </div>
 
-            <div class="col-md-3 mb-md-0 mb-3">
+            <div class="col-md-2 mb-md-0 mb-3">
                 <ul class="list-unstyled">
                     <li>
                         <a href="home.php">Home</a>
@@ -29,7 +29,7 @@
                 </ul>
             </div>
 
-            <div class="col-md-3 mb-md-0 mb-3">
+            <div class="col-md-2 mb-md-0 mb-3">
                 <ul class="list-unstyled">
                     <li>
                         <a href="regions.php">Regiões</a>
@@ -52,13 +52,19 @@
                 </ul>
             </div>
             
-            <div class="col-md-3 mb-md-0 mb-3 social-box-footer">
+            <div class="col-md-2 mb-md-0 mb-3 social-box-footer">
                 <h5 class="text-uppercase">REDES SOCIAIS</h5>
 
                 <a href="https://www.facebook.com/mestresderuneterra/" target="blank" class="facebook-link"><i class="fab fa-facebook-square"></i></a>
                 <a href="https://twitter.com/MRuneterra" target="blank" class="twitter-link"><i class="fab fa-twitter-square"></i></a>
                 <a href="https://www.youtube.com/channel/UCeL41NYLAk5EW8nHv5ARbNw" target="blank" class="youtube-link"><i class="fab fa-youtube-square"></i></a>
                 <a href="https://www.instagram.com/mestresderuneterra/" target="blank" class="instagram-link"><i class="fab fa-instagram-square"></i></a>
+            </div>
+            <div class="col-md-3 parceiros-box">
+                <h5 class="text-uppercase">PARCEIROS</h5>
+
+                <a href="https://lor.cardsrealm.com/" target="blank" class="facebook-link"><img src="img/parceiros/cardsrealm.png" alt="Cards Realm"></a>
+                <a href="https://www.facebook.com/groups/leagueofruneterrabrasil/" target="blank" class="facebook-link"><img src="img/parceiros/lor_grupo.webp"></a>
             </div>
 
         </div>

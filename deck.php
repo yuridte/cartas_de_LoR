@@ -133,6 +133,21 @@ if(isset($_GET['id'])){
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Criado em: <?= $data_criacao ?><br>
                 Atualizado em: <?= $data_ultima_atualizacao ?>        
             </div>
+
+            <?php 
+            // Pesquisando nome do criador
+            $sql_user = "SELECT name FROM user WHERE id LIKE '" . $deck_info['owner_id'] . "';";
+            //colocando em array
+            $user_array = $dbConn->query($sql_user)->fetchAll();
+
+            //escrevendo os decks individualmente
+            foreach ($user_array as $user) {
+                ?>
+                <h3><b>Criador: </b> <i><?= $user['name']; ?></i></h3>
+                <?php
+            }
+            ?>
+
             <p><?= $deck_info['description'] ?></p>
         </div>
 

@@ -143,6 +143,19 @@ use Pagerfanta\Pagerfanta;
                                 </div>
                                 <div class="letreiro">
                                     <span><?= $deck['name']; ?></span>
+
+                                    <?php 
+                                    $sql_user = "SELECT name FROM user WHERE id LIKE '" . $deck['owner_id'] . "';";
+                                    //colocando em array
+                                    $user_array = $dbConn->query($sql_user)->fetchAll();
+
+                                    //escrevendo os decks individualmente
+                                    foreach ($user_array as $user) {
+                                        ?>
+                                        <h3><b>De: </b> <i><?= $user['name']; ?></i></h3>
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </a>

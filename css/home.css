@@ -276,6 +276,26 @@ hr{
 .margem-top-80{
     margin-top: 80px;
 }
+.streamers-live-box{
+    margin-top: 50px;
+}
+.streamers-live-box .col-md-4 .stream{
+    background-color: #1a1a1a;
+    box-shadow: 5px 5px 5px black;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+.streamers-live-box img{
+    max-width: 100%;
+}
+.streamers-live-box h1{
+    font-size: 30px;
+    text-align: center;
+}
+.streamers-live-box a{
+    text-decoration: none;
+}
+
 
 
 /*Creators*/
@@ -391,6 +411,14 @@ hr{
 }
 .artigo-container h3 span{
     vertical-align: middle;
+}
+.user-profile-pic{
+    float: left;
+    margin-top: 0;
+    border-radius: 50%;
+    margin-right: 20px !important;
+    width: 74px;
+    height: 74px;
 }
 
 
@@ -743,16 +771,16 @@ option{
     padding: 10px 30px;
     border-radius: 20px;
     margin-bottom: 10px;
-    color: black;
+    color: #fff;
     text-shadow:
-        1px 0 0 #fff, 
-        -1px 0 0 #fff, 
-        0 1px 0 #fff, 
-        0 -1px 0 #fff, 
-        1px 1px #fff, 
-        -1px -1px 0 #fff, 
-        1px -1px 0 #fff, 
-        -1px 1px 0 #fff;
+        1px 0 0 #000, 
+        -1px 0 0 #000, 
+        0 1px 0 #000, 
+        0 -1px 0 #000, 
+        1px 1px #000, 
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1052,6 +1080,34 @@ footer{
 
 
 
+
+/*Streams*/
+.live-streamers-pc{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #21024a;
+    border-radius: 10px;
+    padding: 10px;
+    z-index: 10;
+    box-shadow: 3px 3px 5px #000;
+} 
+.live-streamers-pc *{
+    margin: 0;
+}
+.live-streamers-pc a{
+    text-decoration: none;
+    color: white;
+}
+.live-streamers-pc td{
+    vertical-align: middle;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+
+
 /*letras douradas*/
 h1 {
     color:	#D5AD6D; /*if no support for background-clip*/
@@ -1097,5 +1153,23 @@ h2{
         margin-top: 0px;
         font-size: 40px;
         filter: drop-shadow(0 0 2px #000);
+    }
+    .live-streamers-pc{
+        width: 100%;
+        border-radius: 0;
+        bottom: 0px;
+        right: 0px;
+    }
+    .live-streamers-pc h2{
+        font-size: 20px;
+    }
+    .live-streamers-pc h3{
+        font-size: 13px;
+    }
+    .container-padrao{
+        padding: 50px 15px;
+    }
+    .footer-copyright{
+        padding-bottom: 100px !important;
     }
 }

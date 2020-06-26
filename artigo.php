@@ -46,7 +46,11 @@ if(isset($_GET['slug'])) {
                     $autor_array = $dbConn->query($sql_autor)->fetchAll();
                     foreach ($autor_array as $autor) {
                     ?>
+                    <div class="container">
+                        <img class="user-profile-pic" src="uploads/users-profile-pic/<?= $autor['id'] ?>.jpg">
                         <b><i><?= $autor['name'] ?></i></b>
+                        <p><?= $autor['description'] ?></p>
+                    </div>
                     <?php 
                     } 
                     ?>

@@ -59,8 +59,9 @@ require_once("header.php");
 <div class="container-fluid conteudo">
     <div class="container">
         <div class="row">
+
             <div class="col-sm-12 home-box">
-                <h2>Decks em destaque</h2>
+                <h2>Decks da comunidade</h2>
                 <hr>
 
                 <div class="container deck-list">
@@ -68,7 +69,7 @@ require_once("header.php");
 
                         <!-- LISTA DE DECKS -->
                         <?php
-                        $sql = "SELECT * FROM decks WHERE starred LIKE '1' ORDER BY last_update DESC LIMIT 4;";
+                        $sql = "SELECT * FROM decks ORDER BY last_update DESC LIMIT 4;";
                         
                         //colocando em array
                         $decks_by_time = $dbConn->query($sql)->fetchAll();
@@ -130,68 +131,6 @@ require_once("header.php");
                 </div>
             </div>
 
-            <div class="col-sm-12 home-box">
-                <h2>Decks mais novos</h2>
-                <hr>
-
-                <div class="container deck-list">
-                    <div class="row">
-
-                        <!-- LISTA DE DECKS -->
-                        <?php
-                        $sql = "SELECT * FROM decks ORDER BY last_update DESC LIMIT 4;";
-                        
-                        //colocando em array
-                        $decks_by_time = $dbConn->query($sql)->fetchAll();
-
-                        foreach ($decks_by_time as $deck) {
-
-                            $regions = explode("|", $deck['regions']);
-                            ?>
-
-                            <div class='col-md-3 text-center '>
-                                <div class="deck-box-container">
-                                    <a href='deck.php?id=<?= $deck['id']; ?>'>
-                                        <div class="deck-box">
-                                            <div class="regions">
-                                                <?php 
-                                                foreach ($regions as $region) {
-                                                    echo '<img height="70px" title="' . $region . '" src="img/regions/hd/' . $region . '.png">';
-                                                }
-                                                ?>
-                                                
-                                            </div>
-                                            <div class="letreiro">
-                                                <span><?= $deck['name']; ?></span>
-
-                                                <?php 
-                                                $sql_user = "SELECT name FROM user WHERE id LIKE '" . $deck['owner_id'] . "';";
-                                                //colocando em array
-                                                $user_array = $dbConn->query($sql_user)->fetchAll();
-
-                                                //escrevendo os decks individualmente
-                                                foreach ($user_array as $user) {
-                                                    ?>
-                                                    <h3><b>De: </b> <i><?= $user['name']; ?></i></h3>
-                                                    <?php
-                                                }
-                                                ?>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-
-                        <?php
-                        }
-                        ?>
-
-                        <div class="col-md-12 text-center">
-                            <a href="deck-library.php" class="btn btn-primary">Ver mais decks &rarr;</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -219,7 +158,7 @@ require_once("header.php");
             <hr>
         </div>
         <?php 
-        $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY title ASC LIMIT 1";
+        $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY id DESC LIMIT 1";
         $artigos_destaque = $dbConn->query($sql_blog_home)->fetchAll();
 
         foreach ($artigos_destaque as $artigo) {
@@ -236,7 +175,7 @@ require_once("header.php");
         ?>
         <div class="col-md-7">
             <?php 
-            $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY title ASC LIMIT 1,3";
+            $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY id DESC LIMIT 1,3";
             $artigos_destaque = $dbConn->query($sql_blog_home)->fetchAll();
 
             foreach ($artigos_destaque as $artigo) {

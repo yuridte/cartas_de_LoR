@@ -1,3 +1,4 @@
+<?php require('streamers-live-box.php'); ?>
 <!-- Footer -->
 <footer class="page-footer font-small border-top">
     <div class="container text-center text-md-left ">
@@ -63,7 +64,7 @@
             <div class="col-md-3 parceiros-box">
                 <h5 class="text-uppercase">PARCEIROS</h5>
 
-                <a href="https://lor.cardsrealm.com/" target="blank" class="facebook-link"><img src="img/parceiros/cardsrealm.png" alt="Cards Realm"></a>
+                <a href="https://lor.cardsrealm.com?partner=mestresderuneterra" target="blank" class="facebook-link"><img src="img/parceiros/cardsrealm.png" alt="Cards Realm"></a>
                 <a href="https://www.facebook.com/groups/leagueofruneterrabrasil/" target="blank" class="facebook-link"><img src="img/parceiros/lor_grupo.webp"></a>
             </div>
 

@@ -13,17 +13,13 @@ require_once("header.php");
     <h1>Ao Vivo</h1>
 </div>
 
-<div class="container creator-container">
 
-    <div class="row artigo-container justify-content-center">
-        <div class="col-md-9 text-center">
-            <p>Essas são as streams dos nossos parceiros que estão acontecendo nesse momento na Twitch. Clique em uma miniatura para assistir.</p>
-            <p>Mande um e-mail pela <a href="contact.php">página de contato</a> e anuncie sua stream gratuitamente!</p>
-        </div>
-    </div>
-</div>
+
 
 <div class="container streamers-live-box">
+    <h2>Clique em uma miniatura para assistir</h2>
+    <br><br>
+    
     <div class="row">
         <?php
         function file_get_channelcontents_curl($streamurl) {
@@ -74,6 +70,16 @@ require_once("header.php");
     </div>
 </div>
 
+
+<div class="container creator-container">
+    <div class="row artigo-container justify-content-center">
+        <div class="col-md-9 text-center">
+            <p style="margin-bottom: 0">Mande um e-mail pela <a href="contact.php">página de contato</a> e anuncie sua stream gratuitamente!</p>
+        </div>
+    </div>
+</div>
+
+<br><br><br>
 
 <?php 
 //incluindo sessão de compartilhamento

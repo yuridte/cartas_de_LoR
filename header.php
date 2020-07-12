@@ -18,7 +18,7 @@ require_once("cfg.php");
     gtag('config', 'UA-36323975-8');
     </script>
 
-
+    <title>Mestres de Runeterra</title>
     <script type="text/javascript">
         // Mudando o title
         var title_topo_atual = "Mestres de Runeterra";

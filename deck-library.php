@@ -136,11 +136,12 @@ use Pagerfanta\Pagerfanta;
                                 <div class="regions">
                                     <?php 
                                     foreach ($regions as $region) {
-                                        echo '<img height="70px" title="' . $region . '" src="img/regions/hd/' . $region . '.png">';
+                                        echo '<img height="60px" title="' . $region . '" src="img/regions/vanilla/icon-' . $region . '.png">';
                                     }
                                     ?>
                                     
                                 </div>
+
                                 <div class="letreiro">
                                     <span><?= $deck['name']; ?></span>
 
@@ -152,10 +153,12 @@ use Pagerfanta\Pagerfanta;
                                     //escrevendo os decks individualmente
                                     foreach ($user_array as $user) {
                                         ?>
-                                        <h3><b>De: </b> <i><?= $user['name']; ?></i></h3>
+                                        <h3><i><?= $user['name']; ?></i></h3>
                                         <?php
                                     }
+                                    $data_ultima_atualizacao = date('d/m/Y H:i',strtotime($deck['last_update']));
                                     ?>
+                                    <h3><i><?= $data_ultima_atualizacao; ?></i></h3>
                                 </div>
                             </div>
                         </a>

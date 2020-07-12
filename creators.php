@@ -16,10 +16,10 @@ require_once("header.php");
 <div class="container creator-container">
 
     <div class="row artigo-container justify-content-center">
-        <div class="col-md-8 text-center">
+        <div class="col-md-12 text-center">
             <h2>Anuncie seu trabalho aqui!</h2>
             <hr>
-            <p>O objetivo do Mestres de Runeterra é fortalecer a comunidade brasileira de Legends of Runeterra. Para isso não estou sozinho, conto com você produtor de conteúdo! Anuncie sua stream, seu canal e suas redes sociais gratuitamente e tenha mais visibilidade. Juntos nós podemos fazer coisas incríveis!</p>
+            <p>Um dos objetivos do <b>Mestres de Runeterra</b> é fortalecer a comunidade brasileira de Legends of Runeterra. Para isso não estou sozinho, conto com você produtor de conteúdo! Anuncie sua stream, seu canal e suas redes sociais gratuitamente e tenha mais visibilidade. Juntos nós podemos fazer coisas incríveis!</p>
             <p>Mande um e-mail pela <a href="contact.php">página de contato</a> e anuncie conosco gratuitamente!</p>
             <a href="lives.php"><button class="btn btn-danger">Veja quem está em live &rarr;</button></a>
         </div>

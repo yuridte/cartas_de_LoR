@@ -35,31 +35,31 @@ if(isset($_GET['cardCode'])) {
                                 <?php 
                                 switch ($regionRef) {
                                     case 'Bilgewater':
-                                        echo "<img src='img/regions/icon/bilgewater_crest_icon.png' alt='Águas de Sentina'> Águas de Sentina";
+                                        echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Águas de Sentina'> Águas de Sentina";
                                         break;
 
                                     case 'Demacia':
-                                        echo "<img src='img/regions/icon/demacia_crest_icon.png' alt='Demacia'> Demacia";
+                                        echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Demacia'> Demacia";
                                         break;
 
                                     case 'Freljord':
-                                        echo "<img src='img/regions/icon/freljord_crest_icon.png' alt='Freljord'> Freljord";
+                                        echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Freljord'> Freljord";
                                         break;
 
                                     case 'Ionia':
-                                        echo "<img src='img/regions/icon/ionia_crest_icon.png' alt='Ionia'> Ionia";
+                                        echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Ionia'> Ionia";
                                         break;
 
                                     case 'Noxus':
-                                        echo "<img src='img/regions/icon/noxus_crest_icon.png' alt='Noxus'> Noxus";
+                                        echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Noxus'> Noxus";
                                         break;
 
                                     case 'PiltoverZaun':
-                                        echo "<img src='img/regions/icon/piltover_crest_icon.png' alt='Piltover & Zaun'> Piltover & Zaun";
+                                        echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Piltover & Zaun'> Piltover & Zaun";
                                         break;
 
                                     case 'ShadowIsles':
-                                        echo "<img src='img/regions/icon/shadow_isles_crest_icon.png' alt='Ilhas das Sombras'> Ilhas das Sombras";
+                                        echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Ilhas das Sombras'> Ilhas das Sombras";
                                         break;
                                 }
                                 ?>
@@ -225,31 +225,31 @@ if(isset($_GET['cardCode'])) {
                                             <?php 
                                             switch ($regionRef) {
                                                 case 'Bilgewater':
-                                                    echo "<img src='img/regions/icon/bilgewater_crest_icon.png' alt='Águas de Sentina'> Águas de Sentina";
+                                                    echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Águas de Sentina'> Águas de Sentina";
                                                     break;
 
                                                 case 'Demacia':
-                                                    echo "<img src='img/regions/icon/demacia_crest_icon.png' alt='Demacia'> Demacia";
+                                                    echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Demacia'> Demacia";
                                                     break;
 
                                                 case 'Freljord':
-                                                    echo "<img src='img/regions/icon/freljord_crest_icon.png' alt='Freljord'> Freljord";
+                                                    echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Freljord'> Freljord";
                                                     break;
 
                                                 case 'Ionia':
-                                                    echo "<img src='img/regions/icon/ionia_crest_icon.png' alt='Ionia'> Ionia";
+                                                    echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Ionia'> Ionia";
                                                     break;
 
                                                 case 'Noxus':
-                                                    echo "<img src='img/regions/icon/noxus_crest_icon.png' alt='Noxus'> Noxus";
+                                                    echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Noxus'> Noxus";
                                                     break;
 
                                                 case 'PiltoverZaun':
-                                                    echo "<img src='img/regions/icon/piltover_crest_icon.png' alt='Piltover & Zaun'> Piltover & Zaun";
+                                                    echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Piltover & Zaun'> Piltover & Zaun";
                                                     break;
 
                                                 case 'ShadowIsles':
-                                                    echo "<img src='img/regions/icon/shadow_isles_crest_icon.png' alt='Ilhas das Sombras'> Ilhas das Sombras";
+                                                    echo "<img src='img/regions/vanilla/icon-".$regionRef.".png' alt='Ilhas das Sombras'> Ilhas das Sombras";
                                                     break;
                                             }
                                             ?>

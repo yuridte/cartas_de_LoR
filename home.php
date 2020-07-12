@@ -17,8 +17,9 @@ require_once("header.php");
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h1>Seja bem-vindo!</h1>
-                    <h2>Leia a minha <a href="artigo.php?slug=mensagem-de-boas-vindas">mensagem</a> de boas-vindas!</h2>
+                    <h1>Veja os decks do Meta!</h1>
+                    <h2>Veja os melhores decks com a curadoria<br>dos grandes Gwentar, Serket e Teta do Urso. <a href="meta.php">Ver meta!</a></h2>
+                    <h2>Atualizado em 09/07/2020</h2>
                 </div>
             </div>
         </div>
@@ -86,11 +87,11 @@ require_once("header.php");
                                             <div class="regions">
                                                 <?php 
                                                 foreach ($regions as $region) {
-                                                    echo '<img height="70px" title="' . $region . '" src="img/regions/hd/' . $region . '.png">';
+                                                    echo '<img height="60px" title="' . $region . '" src="img/regions/vanilla/icon-' . $region . '.png">';
                                                 }
                                                 ?>
-                                                
                                             </div>
+
                                             <div class="letreiro">
                                                 <span><?= $deck['name']; ?></span>
 
@@ -102,10 +103,13 @@ require_once("header.php");
                                                 //escrevendo os decks individualmente
                                                 foreach ($user_array as $user) {
                                                     ?>
-                                                    <h3><b>De: </b> <i><?= $user['name']; ?></i></h3>
+                                                    <h3><i><?= $user['name']; ?></i></h3>
                                                     <?php
                                                 }
+                                                $data_ultima_atualizacao = date('d/m/Y H:i',strtotime($deck['last_update']));
                                                 ?>
+                                                <h3><i><?= $data_ultima_atualizacao; ?></i></h3>
+
                                             </div>
                                         </div>
                                     </a>
@@ -123,17 +127,104 @@ require_once("header.php");
                 </div>
             </div>
 
-            <div class="col-md-12 gotometa">
-                <div class="container">
-                    <a href="meta.php">
-                        <img src="img/decks-meta-link.jpg" width="100%" alt="Decks do Meta">
-                    </a>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid meta-box-home">
+    <div class="col-sm-12 creators">
+        <h2>Meta Game</h2>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <h3>O metagame funciona para explicar as estratégias populares em determinado momento.</h3>
+                <h3>O meta não é uma lista mágica dos decks que vão fazer você pegar mestre. É uma opinião sobre os decks mais usados na atualidade e a força deles comparados entre si.</h3>
+                <h3>O Mestres de Runeterra usa a classificação de Tier S, A e B.</h3>
+
+                <a href="meta.php" class="btn btn-primary">Ver Decks do Meta &rarr;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid conteudo">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12 home-box">
+                <h2>Outros Decks em Destaque</h2>
+                <hr>
+
+                <div class="container deck-list">
+                    <div class="row">
+
+                        <!-- LISTA DE DECKS -->
+                        <?php
+                        $sql = "SELECT * FROM decks WHERE starred LIKE '1' ORDER BY last_update DESC LIMIT 4;";
+                        
+                        //colocando em array
+                        $decks_by_time = $dbConn->query($sql)->fetchAll();
+
+                        foreach ($decks_by_time as $deck) {
+
+                            $regions = explode("|", $deck['regions']);
+                            ?>
+
+                            <div class='col-md-3 text-center '>
+                                <div class="deck-box-container">
+                                    <a href='deck.php?id=<?= $deck['id']; ?>'>
+                                        <div class="deck-box">
+                                            <div class="regions">
+                                                <?php 
+                                                foreach ($regions as $region) {
+                                                    echo '<img height="60px" title="' . $region . '" src="img/regions/vanilla/icon-' . $region . '.png">';
+                                                }
+                                                ?>
+                                                
+                                            </div>
+
+                                            <div class="letreiro">
+                                                <span><?= $deck['name']; ?></span>
+
+                                                <?php 
+                                                $sql_user = "SELECT name FROM user WHERE id LIKE '" . $deck['owner_id'] . "';";
+                                                //colocando em array
+                                                $user_array = $dbConn->query($sql_user)->fetchAll();
+
+                                                //escrevendo os decks individualmente
+                                                foreach ($user_array as $user) {
+                                                    ?>
+                                                    <h3><i><?= $user['name']; ?></i></h3>
+                                                    <?php
+                                                }
+                                                $data_ultima_atualizacao = date('d/m/Y H:i',strtotime($deck['last_update']));
+                                                ?>
+                                                <h3><i><?= $data_ultima_atualizacao; ?></i></h3>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                        <?php
+                        }
+                        ?>
+
+                        <div class="col-md-12 text-center">
+                            <a href="deck-library.php" class="btn btn-primary">Ver mais decks &rarr;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 </div>
+
 
 <div class="container-fluid creators-box">
     <div class="col-sm-12 creators">
@@ -164,7 +255,7 @@ require_once("header.php");
         foreach ($artigos_destaque as $artigo) {
             extract($artigo);
         ?>
-        <div class="col-md-5 text-center">
+        <div class="col-md-6 artigo-destaque text-center">
             <a href="artigo.php?slug=<?= $slug ?>">
                 <img src="uploads/blog-thumbs/<?= $id ?>.jpg">
                 <span><?= $title ?></span>
@@ -173,9 +264,9 @@ require_once("header.php");
         <?php
         }
         ?>
-        <div class="col-md-7">
+        <div class="col-md-6">
             <?php 
-            $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY id DESC LIMIT 1,3";
+            $sql_blog_home = "SELECT * FROM `articles` WHERE highlighted LIKE '1' ORDER BY id DESC LIMIT 1,4";
             $artigos_destaque = $dbConn->query($sql_blog_home)->fetchAll();
 
             foreach ($artigos_destaque as $artigo) {

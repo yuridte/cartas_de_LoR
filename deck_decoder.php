@@ -3,7 +3,7 @@ require_once("vendor/autoload.php");
 use MikeReinders\RuneTerraPHP\DeckEncoding;
 
 // decodificando...
-$deck = DeckEncoding::decode("CEBAIAICAMGRWMIHAECQOCQVC4RC6MICAEAQKKQBAEBASAQBAECQ6AQBAIDSA");
+$deck = DeckEncoding::decode("CEBQMAIAAEERKHJHFMBAEBQICYBQEAAGBEFAEAQCAABAOAIBAASQCAIBAAUQ");
 var_dump($deck);
 
 //codificando de volta

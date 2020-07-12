@@ -18,11 +18,16 @@ require_once("cfg.php");
     gtag('config', 'UA-36323975-8');
     </script>
 
+
+    <script type="text/javascript">
+        // Mudando o title
+        var title_topo_atual = "Mestres de Runeterra";
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/favicon-mestres-de-runeterra-32.jpg" sizes="32x32">
     <link rel="shortcut icon" href="img/favicon-mestres-de-runeterra.jpg" sizes="57x57">
-    <title>Mestres de Runeterra</title>
 
     <!-- Bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -50,6 +55,9 @@ require_once("cfg.php");
                 <li class="nav-item">
                     <a class="nav-link" href="home.php">HOME</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link header-menu-meta" href="meta.php">META</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     O JOGO
@@ -71,6 +79,15 @@ require_once("cfg.php");
                 <li class="nav-item">
                     <a class="nav-link" href="blog.php">ARTIGOS</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    TORNEIOS
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="calendario.php">CALENDÁRIO</a>
+                        <a class="dropdown-item" href="blog-torneios.php">ARTIGOS</a>
+                    </div>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="beginners.php">INICIANTES</a>
                 </li>
@@ -89,7 +106,7 @@ require_once("cfg.php");
                         Olá, <?= $_COOKIE['name'] ?>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="login-drop">
-                            <a class="dropdown-item" href="my-profile.php">Ver Perfil</a>
+                            <a class="dropdown-item" href="profile.php?user=<?= $_COOKIE['id'] ?>">Ver Perfil</a>
                             <a class="dropdown-item" href="my-decks.php">Meus Decks</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="encerrar_sessao.php">SAIR</a>

@@ -57,7 +57,7 @@ require_once("header.php"); //cabeçalho do site
 
 		<!-- LISTA DE DECKS -->
 		<?php 
-		$sql = "SELECT * FROM decks WHERE owner_id LIKE '$_COOKIE[id]' ORDER BY timestamp DESC;";
+		$sql = "SELECT * FROM decks WHERE owner_id LIKE '$_COOKIE[id]' ORDER BY last_update DESC;";
 		//colocando em array
         $decks_by_time = $dbConn->query($sql)->fetchAll();
 
@@ -78,8 +78,25 @@ require_once("header.php"); //cabeçalho do site
                                 ?>
                                 
                             </div>
+
                             <div class="letreiro">
                                 <span><?= $deck['name']; ?></span>
+
+                                <?php 
+                                $sql_user = "SELECT name FROM user WHERE id LIKE '" . $deck['owner_id'] . "';";
+                                //colocando em array
+                                $user_array = $dbConn->query($sql_user)->fetchAll();
+
+                                //escrevendo os decks individualmente
+                                foreach ($user_array as $user) {
+                                    ?>
+                                    <h3><i><?= $user['name']; ?></i></h3>
+                                    <?php
+                                }
+                                $data_ultima_atualizacao = date('d/m/Y H:i',strtotime($deck['last_update']));
+                                ?>
+                                <h3><i><?= $data_ultima_atualizacao; ?></i></h3>
+
                             </div>
                         </div>
                     </a>

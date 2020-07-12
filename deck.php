@@ -60,6 +60,17 @@ if(isset($_GET['id'])){
                         array_push($spell_array, $card_info);
                     }
 
+                    //ordenando pelo custo
+                    uasort($champions_array, function ($a, $b) {
+                        return $a['cost'] > $b['cost'];
+                    });
+                    uasort($units_array, function ($a, $b) {
+                        return $a['cost'] > $b['cost'];
+                    });
+                    uasort($spell_array, function ($a, $b) {
+                        return $a['cost'] > $b['cost'];
+                    });
+
                     //curva de mana
                     $custo = $card_info['cost'];
                     for ($i=1; $i <= $qt ; $i++) { 
@@ -184,9 +195,11 @@ if(isset($_GET['id'])){
             echo '<h2>Campeões</h2>';
 
             foreach ($champions_array as $card) {
+
+                $region = preg_replace('/[0-9]/', '', $card['cardCode']);
                 ?>
                 <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
-                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
+                <div class='region_<?= $region ?> card-item' style='background: url(img/regions/card_bg/<?= $region ?>.png) repeat-y left, url("https://cdn-lor.mobalytics.gg/production/images/cards-preview/<?= $card['cardCode']; ?>.webp") no-repeat right; background-size: auto 100%, auto 100%'>
                     <?= $card['qt']; ?>x <?= $card['name']; ?><br>
                 </div>
                 <img src="img/cards_medium_size/<?= $card['cardCode']; ?>-medium.png">
@@ -202,9 +215,11 @@ if(isset($_GET['id'])){
             echo '<h2>Unidades</h2>';
 
             foreach ($units_array as $card) {
+
+                $region = preg_replace('/[0-9]/', '', $card['cardCode']);
                 ?>
                 <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
-                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
+                <div class='region_<?= $region ?> card-item' style='background: url(img/regions/card_bg/<?= $region ?>.png) repeat-y left, url("https://cdn-lor.mobalytics.gg/production/images/cards-preview/<?= $card['cardCode']; ?>.webp") no-repeat right; background-size: auto 100%, auto 100%'>
                     <?= $card['qt']; ?>x <?= $card['name']; ?><br>
                 </div>
                 <img src="img/cards_medium_size/<?= $card['cardCode']; ?>-medium.png">
@@ -219,9 +234,11 @@ if(isset($_GET['id'])){
             echo '<h2>Spells</h2>';
 
             foreach ($spell_array as $card) {
+                
+                $region = preg_replace('/[0-9]/', '', $card['cardCode']);
                 ?>
                 <a href='card.php?cardCode=<?= $card['cardCode']; ?>'>
-                <div class='card-item' style='background-image: url("img/cards_small_size/<?= $card['cardCode']; ?>-full.jpg");'>
+                <div class='region_<?= $region ?> card-item' style='background: url(img/regions/card_bg/<?= $region ?>.png) repeat-y left, url("https://cdn-lor.mobalytics.gg/production/images/cards-preview/<?= $card['cardCode']; ?>.webp") no-repeat right; background-size: auto 100%, auto 100%'>
                     <?= $card['qt']; ?>x <?= $card['name']; ?><br>
                 </div>
                 <img src="img/cards_medium_size/<?= $card['cardCode']; ?>-medium.png">

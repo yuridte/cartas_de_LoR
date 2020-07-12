@@ -57,7 +57,7 @@ require_once("header.php");
                 ?>
                 <div class="col-md-4">
                     <div class="stream">
-                        <a href="<?= $creator['twitch'] ?>" target="new">
+                        <a href="<?= $creator['twitch'] ?>" role="link" target="new">
                             <img src="uploads/creators/<?= $creator['id'] ?>.png">
                             <h1><?= $creator['name'] ?></h1>
                         </a>

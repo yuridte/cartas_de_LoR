@@ -16,8 +16,7 @@ require_once("header.php"); //cabeçalho do site
 <div class="container">
     <div class="row artigo-container justify-content-center">
         <div class="col-md-12 text-center">
-            <p>Quer anunciar seu torneio? Fale com MrHarryXD no <a href="https://discord.gg/3wKNbEe" target="_new">discord</a> ou mande um e-mail para <a href="mailto:mrharryxd@gmail.com">mrharryxd@gmail.com</a>.</p>
-            <p>Os torneios são atualizados pelo nosso incrível <a href="https://www.twitch.tv/mrharryxd1" target="_new" role='link'><b>MrHarryXD</b></a>. Acesse as redes sociais clicando nos links ao lado.</p>
+            <p>Quer anunciar seu torneio? Fale com MrHarryXD no <a href="https://discord.gg/3wKNbEe" target="_new">discord</a> ou mande um e-mail para <a href="mailto:mrharryxd@gmail.com">mrharryxd@gmail.com</a>. Os torneios são atualizados pelo nosso incrível <a href="https://www.twitch.tv/mrharryxd1" target="_new" role='link'><b>MrHarryXD</b></a>. Acesse as redes sociais clicando nos links abaixo.</p>
             <div class="social-box-footer">
                 <h4>MrHarryXD</h4>
                 <a href="https://twitter.com/MrHarryXD1" target="_new" class="twitter-link"><i class="fab fa-twitter-square"></i></a>

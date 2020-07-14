@@ -523,10 +523,11 @@ hr{
 
 
 /*Perfil*/
-.profile-container .profile-box{
-    background-color: whitesmoke;
+.profile-container .profile-box .col-md-12{
     color: black;
+    background-color: whitesmoke;
     padding: 20px 10px;
+    word-wrap: break-word;
 }
 .profile-box .form-group{
     padding-bottom: 30px;

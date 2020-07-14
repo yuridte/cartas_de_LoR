@@ -105,19 +105,19 @@ if(isset($_GET['id'])){
         if(isset($_COOKIE['id']) && $deck_info['owner_id'] == $_COOKIE['id']){
         ?>
         
-        <div class="col-md-12 text-center box-acao">
-            <a href="action_deck.php?id_deck=<?= $id ?>&action=editar"><button class="btn btn-success">Editar</button></a>
-            <a onclick="deleteDeck()"><button class="btn btn-danger">Remover</button></a>
-        </div>
+            <div class="col-md-12 text-center box-acao">
+                <a href="action_deck.php?id_deck=<?= $id ?>&action=editar"><button class="btn btn-success">Editar</button></a>
+                <a onclick="deleteDeck()"><button class="btn btn-danger">Remover</button></a>
+            </div>
 
-        <script type="text/javascript">
-            function deleteDeck() {
-                var ask = window.confirm("Tem certeza que quer apagar seu deck?");
-                if (ask) {
-                    window.location.href = "action_deck.php?id_deck=<?= $id ?>&action=remover";
+            <script type="text/javascript">
+                function deleteDeck() {
+                    var ask = window.confirm("Tem certeza que quer apagar seu deck?");
+                    if (ask) {
+                        window.location.href = "action_deck.php?id_deck=<?= $id ?>&action=remover";
+                    }
                 }
-            }
-        </script>
+            </script>
 
         <?php 
         }
@@ -154,7 +154,7 @@ if(isset($_GET['id'])){
             //escrevendo os decks individualmente
             foreach ($user_array as $user) {
                 ?>
-                <h3><b>Criador: </b> <i><?= $user['name']; ?></i></h3>
+                <h3><b>Criador: </b> <a href="profile.php?user=<?= $deck_info['owner_id'] ?>"><i><?= $user['name']; ?></i></a></h3>
                 <?php
             }
             ?>

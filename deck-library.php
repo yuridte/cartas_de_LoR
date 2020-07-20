@@ -74,7 +74,7 @@ use Pagerfanta\Pagerfanta;
     </div>
 </div>
 
-<div class="container deck-list">
+<div class="container deck-list deck-library">
 	<div class="row">
 
 		<!-- LISTA DE DECKS -->
@@ -116,7 +116,7 @@ use Pagerfanta\Pagerfanta;
             $pagina_atual = 1;
         }
 
-        $pagerfanta->setMaxPerPage(28); // 10 by default
+        $pagerfanta->setMaxPerPage(30); // 10 by default
 
 
         try {
@@ -129,7 +129,7 @@ use Pagerfanta\Pagerfanta;
                 $regions = explode("|", $deck['regions']);
                 ?>
 
-                <div class='col-md-3 text-center '>
+                <div class='col-md-2 text-center deck-link'>
                     <div class="deck-box-container">
                         <a href='deck.php?id=<?= $deck['id']; ?>'>
                             <div class="deck-box">

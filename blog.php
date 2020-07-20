@@ -19,7 +19,7 @@ use Pagerfanta\Pagerfanta;
 <div class="container container-padrao container-blog">
 
     <?php 
-    $sql = "SELECT * FROM articles WHERE category NOT LIKE 'beginners-1' AND category NOT LIKE 'beginners-2' AND category NOT LIKE 'beginners-3' AND category NOT LIKE 'guides' ORDER BY timestamp DESC;";
+    $sql = "SELECT * FROM articles WHERE category NOT LIKE 'beginners-1' AND category NOT LIKE 'beginners-2' AND category NOT LIKE 'beginners-3' AND category NOT LIKE 'guides' AND status NOT LIKE 'deletado' ORDER BY id DESC;";
     $artigos_array = $dbConn->query($sql)->fetchAll();
 
     //Paginando

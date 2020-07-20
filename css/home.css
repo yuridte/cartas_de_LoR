@@ -196,6 +196,7 @@ hr{
 }
 .blog-box-home{
     margin-top: 70px;
+    margin-bottom: 70px;
 }
 .blog-box-home .artigo-destaque{
     padding-bottom: 50px;
@@ -797,9 +798,15 @@ option{
     margin-top: 5px;
     margin-bottom: 0;
 }
-.deck-list .col-md-3{
-    margin-bottom: 40px;
+.deck-list .deck-link{
     height: 217px;
+    padding: 2.5px;
+}
+.deck-list .deck-link:hover{
+    z-index: 1000;
+}
+.deck-list.deck-library .deck-link{
+    padding: 5px;
 }
 .deck-lista h2{
     font-size: 25px;

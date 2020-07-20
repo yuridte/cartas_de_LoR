@@ -73,7 +73,7 @@ require_once("header.php"); //cabeçalho do site
                             <div class="regions">
                                 <?php 
                                 foreach ($regions as $region) {
-                                    echo '<img height="70px" title="' . $region . '" src="img/regions/hd/' . $region . '.png">';
+                                    echo '<img height="60px" title="' . $region . '" src="img/regions/vanilla/icon-' . $region . '.png">';
                                 }
                                 ?>
                                 

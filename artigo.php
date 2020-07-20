@@ -47,8 +47,8 @@ if(isset($_GET['slug'])) {
                     foreach ($autor_array as $autor) {
                     ?>
                     <div class="container">
-                        <img class="user-profile-pic" src="uploads/users-profile-pic/<?= $autor['id'] ?>.jpg">
-                        <b><i><?= $autor['name'] ?></i></b>
+                        <a href="profile.php?user=<?= $autor['id'] ?>"><img class="user-profile-pic" src="uploads/users-profile-pic/<?= $autor['id'] ?>.jpg"></a>
+                        <a href="profile.php?user=<?= $autor['id'] ?>"><b><i><?= $autor['name'] ?></i></b></a>
                         <p><?= $autor['description'] ?></p>
                     </div>
                     <?php 

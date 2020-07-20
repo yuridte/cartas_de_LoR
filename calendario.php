@@ -67,9 +67,13 @@ require_once("header.php"); //cabeçalho do site
             <p>Inscri&ccedil;&otilde;es e mais informa&ccedil;&otilde;es Clique Aqui (<a href="https://discord.gg/3wKNbEe">https://discord.gg/3wKNbEe</a>)</p>
             <p>&nbsp;</p>
 
-            <h3><strong>18 e 19 de Julho (S&aacute;bado e Domingo):</strong></h3>
-            <p>TORNEIO MAIOR INDEFINIDO!</p>
-            <p>&nbsp;</p>
+            <h3><strong>18 e 19 de Julho (Sábado e Domingo):</strong></h3>
+            <p>BR FEST 3</p>
+            <p>Horários: Check-in: 16h; Início do Torneio: 17h (Horário de Brasília)</p>
+            <p>Formato: Swiss (6 ou 7 Rodadas) e TopCut (Top8, Top16...)</p>
+            <p>Formato de Partida: Swiss (MD3 – 3 decks 1 bans) e TopCut (MD5 - 3 decks 0 ban)</p>
+            <p>Premiação: U$ 100,00 (100 dólares) dividido entre o Top4</p>
+            <p>Inscrições e mais informações Clique Aqui (<a href="https://discord.gg/6CZwuWm">https://discord.gg/6CZwuWm)</a></p>
 
             <h3><strong>21 de Julho (Ter&ccedil;a-feira):</strong></h3>
             <p>Exame Chunnin</p>

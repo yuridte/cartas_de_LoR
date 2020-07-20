@@ -60,6 +60,7 @@
                 <a href="https://twitter.com/MRuneterra" target="blank" class="twitter-link"><i class="fab fa-twitter-square"></i></a>
                 <a href="https://www.youtube.com/channel/UCeL41NYLAk5EW8nHv5ARbNw" target="blank" class="youtube-link"><i class="fab fa-youtube-square"></i></a>
                 <a href="https://www.instagram.com/mestresderuneterra/" target="blank" class="instagram-link"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://discord.gg/K8avEX" target="blank" class="discord-link"><i class="fab fa-discord" aria-hidden="true"></i></a>
             </div>
             <div class="col-md-3 parceiros-box">
                 <h5 class="text-uppercase">PARCEIROS</h5>

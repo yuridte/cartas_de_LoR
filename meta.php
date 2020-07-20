@@ -16,8 +16,8 @@ require_once("header.php"); //cabeçalho do site
 <div class="container">
     <div class="row artigo-container justify-content-center">
         <div class="col-md-12 text-center">
-            <p>Quer saber o que é meta? Veja esse artigo: <i><b><a href="artigo.php?slug=o-que-e-meta">O que é meta?</a></b></i></p>
-            <p>Os decks obtiveram a curadoria incrível do <a href="https://www.twitch.tv/gwentartv" role='link'><b>Gwentar</b></a>, <a href="https://www.twitch.tv/capitaoserket" role='link'><b>Serket</b></a> e <a href="https://www.twitch.tv/tetadourso" role='link'><b>Teta do Urso</b></a>. Acesse as redes sociais dos Pro Players clicando nos links abaixo para conferir todo o processo de análise dos decks.</p>
+            <p>Quer saber o que é meta? Quer entender a classificação dos decks? Veja esse artigo: <i><b><a href="artigo.php?slug=o-que-e-meta">O que é meta?</a></b></i></p>
+            <p>Os decks obtiveram a curadoria incrível do <a href="https://www.twitch.tv/gwentartv" role='link'><b>Gwentar</b></a>, <a href="https://www.twitch.tv/capitaoserket" role='link'><b>Serket</b></a>, <a href="https://www.twitch.tv/tetadourso" role='link'><b>Teta do Urso</b></a> e <a href="https://www.twitch.tv/sudrakon" role='link'><b>Sudrakon</b></a>. Acesse as redes sociais dos Pro Players clicando nos links abaixo para conferir todo o processo de análise dos decks.</p>
             <div class="social-box-footer">
                 <table class="hidden-sd" width="100%">
                     <tr>
@@ -41,6 +41,11 @@ require_once("header.php"); //cabeçalho do site
                             <a href="https://twitter.com/TetadoUrso" target="blank" class="twitter-link"><i class="fab fa-twitter-square"></i></a>
                             <a href="https://www.youtube.com/c/TetadoUrso/featured" target="blank" class="youtube-link"><i class="fab fa-youtube-square"></i></a>
                             <a href="https://www.twitch.tv/tetadourso" target="blank" class="twitch-link"><i class="fab fa-twitch"></i></a>
+                        </td>
+                        <td>
+                            <h4>Sudrakon</h4>
+                            <a href="https://twitter.com/SudrakonLoR" target="blank" class="twitter-link"><i class="fab fa-twitter-square"></i></a>
+                            <a href="https://www.twitch.tv/sudrakon" target="blank" class="twitch-link"><i class="fab fa-twitch"></i></a>
                         </td>
                     </tr>
                 </table>
@@ -66,10 +71,15 @@ require_once("header.php"); //cabeçalho do site
                         <a href="https://www.youtube.com/c/TetadoUrso/featured" target="blank" class="youtube-link"><i class="fab fa-youtube-square"></i></a>
                         <a href="https://www.twitch.tv/tetadourso" target="blank" class="twitch-link"><i class="fab fa-twitch"></i></a>
                     </div>
+                    <div>
+                        <h4>Sudrakon</h4>
+                        <a href="https://twitter.com/SudrakonLoR" target="blank" class="twitter-link"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.twitch.tv/sudrakon" target="blank" class="twitch-link"><i class="fab fa-twitch"></i></a>
+                    </div>
                 </div>
             </div>
             <br>
-            <p><b>Atualizado em 09/07/2020</b></p>
+            <p><b>Atualizado em 16/07/2020</b></p>
         </div>
     </div>
 </div>
@@ -129,7 +139,7 @@ require_once("header.php"); //cabeçalho do site
     }
     ?>
 
-<?php /* Essa semana não teve tier a+
+
     <div class="col-md-12">
         <h1>Tier A+</h1>
     </div>
@@ -156,7 +166,7 @@ require_once("header.php"); //cabeçalho do site
     <?php
     }
     ?>
-*/ ?>
+
 
     <div class="col-md-12">
         <h1>Tier A</h1>
@@ -266,6 +276,8 @@ require_once("header.php"); //cabeçalho do site
     }
     ?>
 
+
+<?php /* 
     <div class="col-md-12">
         <h1>Tier B-</h1>
     </div>
@@ -291,7 +303,7 @@ require_once("header.php"); //cabeçalho do site
         </div>
     <?php
     }
-    ?>
+    ?> */ ?>
 </div>
 
 <br><br><br>
